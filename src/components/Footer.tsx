@@ -1,4 +1,9 @@
+"use client";
+
+import { useLanguage } from "../contexts/LanguageContext";
+
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -7,7 +12,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-foreground/80">
-              © {currentYear} Yorick te Riele. All rights reserved.
+              © {currentYear} Yorick te Riele. {t.footer.copyright}
             </p>
           </div>
           
