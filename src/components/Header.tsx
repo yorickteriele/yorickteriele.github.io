@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useLanguage } from "../contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,36 +39,39 @@ export default function Header() {
             href="/"
             className="text-xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            Your Name
-          </Link>
-
+            Yorick te Riele
+          </Link>          
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("about")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              About
+              {t.header.about}
             </button>
             <button
               onClick={() => scrollToSection("experience")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Experience
+              {t.header.experience}
             </button>
             <button
               onClick={() => scrollToSection("projects")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Projects
+              {t.header.projects}
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Contact
+              {t.header.contact}
             </button>
           </div>
-
+          
+          <div className="flex items-center space-x-4">
+            <LanguageSwitcher />
+          </div>
+          {/* 
           <div className="md:hidden">
             <button className="text-foreground hover:text-primary">
               <svg
@@ -80,7 +86,7 @@ export default function Header() {
                 <path d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>

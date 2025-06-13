@@ -8,7 +8,8 @@
     "export": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && touch out/.nojekyll"
+    "deploy": "next build && touch out/.nojekyll",
+    "validate-languages": "node scripts/validate-languages.js"
   },
   "dependencies": {
     "react": "^19.0.0",

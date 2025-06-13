@@ -1,0 +1,154 @@
+{
+  "en": {
+    "code": "en",
+    "name": "English",
+    "flag": "🇺🇸",
+    "header": {
+      "about": "About Me",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hey, I'm",
+      "title": "Yorick te Riele",
+      "subtitle": "Software Engineering Student",
+      "description": "I'm passionate about learning, coding, and building meaningful digital experiences.",
+      "cta": "Let's Connect"
+    },
+    "about": {
+      "title": "About Me",
+      "greeting": "Nice to meet you!",
+      "paragraph1": "I'm Yorick, a curious and driven student in Software Engineering based in Zwolle. I love solving problems with code and turning ideas into working software.",
+      "paragraph2": "Learning new things and applying them in real-world projects motivates me. Whether it’s frontend or backend, I enjoy building solid, user-focused solutions and working in teams using methods like Scrum.",
+      "paragraph3": "Outside of my studies, I work on freelance web projects and keep exploring new tech. I aim to grow every day and contribute with dedication and creativity.",
+      "skillsTitle": "Skills & Technologies"
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "title": "Software Engineer Intern",
+          "company": "djurve",
+          "period": "2025",
+          "description": "Contributed to software development tasks and learned professional workflows in a team setting."
+        },
+        {
+          "title": "IT Support",
+          "company": "Student aan huis",
+          "period": "2023 - 2024",
+          "description": "Helped people at home with tech-related issues and learned to communicate technical solutions clearly."
+        },
+        {
+          "title": "Web Designer",
+          "company": "Ommer Oase",
+          "period": "2021 - Present",
+          "description": "Designed and maintained the website of a local business with a focus on usability and design."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "items": [
+        
+        {
+          "title": "Portfolio Website",
+          "description": "This website! Built with modern frameworks to present my skills, experience, and projects."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let's Connect",
+      "subtitle": "Reach Out",
+      "description": "Interested in collaborating or want to get in touch? I'd love to hear from you!",
+      "email": "Email",
+      "emailDescription": "Send me a message",
+      "linkedin": "LinkedIn",
+      "linkedinDescription": "Connect with me professionally",
+      "github": "GitHub",
+      "githubDescription": "Explore my code",
+      "preferText": "Prefer a different method?",
+      "directEmail": "yorick.teriele@outlook.com",
+      "schedule": "Schedule a Meeting"
+    },
+    "footer": {
+      "copyright": "All rights reserved"
+    }
+  },
+  "nl": {
+    "code": "nl",
+    "name": "Nederlands",
+    "flag": "🇳🇱",
+    "header": {
+      "about": "Over Mij",
+      "experience": "Ervaring",
+      "projects": "Projecten",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hoi, ik ben",
+      "title": "Yorick te Riele",
+      "subtitle": "Software Engineering Student",
+      "description": "Ik ben leergierig, creatief en gek op het bouwen van digitale oplossingen.",
+      "cta": "Stuur een bericht"
+    },
+    "about": {
+      "title": "Over Mij",
+      "greeting": "Leuk dat je er bent!",
+      "paragraph1": "Ik ben Yorick, een enthousiaste student Software Engineering uit Zwolle. Ik houd ervan om met technologie te werken en oplossingen te bouwen die écht iets doen.",
+      "paragraph2": "Nieuwe kennis opdoen en praktisch toepassen is wat mij drijft. Ik werk graag aan zowel frontend als backend en gebruik methodes zoals Scrum om efficiënt samen te werken.",
+      "paragraph3": "Naast mijn studie werk ik aan freelance projecten en verken ik graag nieuwe technologieën. Mijn doel is om elke dag een beetje beter te worden.",
+      "skillsTitle": "Vaardigheden & Technologieën"
+    },
+    "experience": {
+      "title": "Ervaring",
+      "items": [
+        {
+          "title": "Stagiair Software Engineer",
+          "company": "djurve",
+          "period": "2025",
+          "description": "Bijgedragen aan softwareprojecten en ervaring opgedaan in een professioneel team."
+        },
+        {
+          "title": "IT Hulp aan Huis",
+          "company": "Student aan huis",
+          "period": "2023 - 2024",
+          "description": "Technische ondersteuning geboden aan particulieren. Helder communiceren stond centraal."
+        },
+        {
+          "title": "Webdesigner",
+          "company": "Ommer Oase",
+          "period": "2021 - heden",
+          "description": "Website ontworpen en onderhouden met focus op gebruiksgemak en uitstraling."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projecten",
+      "items": [
+        
+        {
+          "title": "Portfolio Website",
+          "description": "Deze site! Gemaakt met moderne webtechnieken om mijn werk te laten zien."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Laten we Verbinden",
+      "description": "Nieuwsgierig of interesse in samenwerking? Stuur gerust een berichtje!",
+      "email": "E-mail",
+      "emailDescription": "Stuur een bericht",
+      "linkedin": "LinkedIn",
+      "linkedinDescription": "Professioneel verbinden",
+      "github": "GitHub",
+      "githubDescription": "Bekijk mijn code",
+      "preferText": "Liever op een andere manier contact?",
+      "directEmail": "yorick.teriele@outlook.com",
+      "schedule": "Plan een Gesprek"
+    },
+    "footer": {
+      "copyright": "Alle rechten voorbehouden"
+    }
+  }
+}
