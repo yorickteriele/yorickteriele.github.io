@@ -111,13 +111,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     setCurrentLanguage(language);
     localStorage.setItem('portfolio-language', language);
   };
-
-  const t = (languageData as any)[currentLanguage] as LanguageData;
+  const t = (languageData as Record<Language, LanguageData>)[currentLanguage];
 
   const availableLanguages = Object.keys(languageData).map(code => ({
     code: code as Language,
-    name: (languageData as any)[code].name,
-    flag: (languageData as any)[code].flag,
+    name: (languageData as Record<Language, LanguageData>)[code as Language].name,
+    flag: (languageData as Record<Language, LanguageData>)[code as Language].flag,
   }));
 
   const value = {
