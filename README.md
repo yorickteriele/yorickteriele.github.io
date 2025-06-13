@@ -1,2 +1,2 @@
-# yorickteriele.github.io
+# https://yorickteriele.nl/
 
