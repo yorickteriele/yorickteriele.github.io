@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
+import type { Language } from "../contexts/LanguageContext";
 
 export default function LanguageSwitcher() {
   const { currentLanguage, setLanguage, availableLanguages } = useLanguage();
@@ -22,9 +23,8 @@ export default function LanguageSwitcher() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
   const handleLanguageChange = (languageCode: string) => {
-    setLanguage(languageCode as any);
+    setLanguage(languageCode as Language);
     setIsOpen(false);
   };
 
