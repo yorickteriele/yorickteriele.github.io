@@ -23,27 +23,29 @@
       "paragraph2": "Learning new things and applying them in real-world projects motivates me. Whether it’s frontend or backend, I enjoy building solid, user-focused solutions and working in teams using methods like Scrum.",
       "paragraph3": "Outside of my studies, I work on freelance web projects and keep exploring new tech. I aim to grow every day and contribute with dedication and creativity.",
       "skillsTitle": "Skills & Technologies"
-    },
-    "experience": {
+    },    "experience": {
       "title": "Experience",
       "items": [
         {
           "title": "Software Engineer Intern",
           "company": "djurve",
           "period": "2025",
-          "description": "Contributed to software development tasks and learned professional workflows in a team setting."
+          "description": "Developed a generic web editor for microservices architecture, contributing to software development tasks and learning professional workflows in a team setting.",
+          "technologies": [".NET/C#", "Svelte", "TypeScript", "SQL Server", "ORM"]
         },
         {
           "title": "IT Support",
           "company": "Student aan huis",
           "period": "2023 - 2024",
-          "description": "Helped people at home with tech-related issues and learned to communicate technical solutions clearly."
+          "description": "Helped people at home with tech-related issues and learned to communicate technical solutions clearly.",
+          "technologies": []
         },
         {
           "title": "Web Designer",
           "company": "Ommer Oase",
           "period": "2021 - Present",
-          "description": "Designed and maintained the website of a local business with a focus on usability and design."
+          "description": "Designed and maintained the website of a local business with a focus on usability and design.",
+          "technologies": []
         }
       ]
     },
@@ -99,27 +101,29 @@
       "paragraph2": "Nieuwe kennis opdoen en praktisch toepassen is wat mij drijft. Ik werk graag aan zowel frontend als backend en gebruik methodes zoals Scrum om efficiënt samen te werken.",
       "paragraph3": "Naast mijn studie werk ik aan freelance projecten en verken ik graag nieuwe technologieën. Mijn doel is om elke dag een beetje beter te worden.",
       "skillsTitle": "Vaardigheden & Technologieën"
-    },
-    "experience": {
+    },    "experience": {
       "title": "Ervaring",
       "items": [
         {
           "title": "Stagiair Software Engineer",
           "company": "djurve",
           "period": "2025",
-          "description": "Bijgedragen aan softwareprojecten en ervaring opgedaan in een professioneel team."
+          "description": "Ontwikkelde een generieke webeditor voor microservices architectuur. Bijgedragen aan softwareprojecten en ervaring opgedaan in een professioneel team.",
+          "technologies": [".NET/C#", "Svelte", "TypeScript", "SQL Server", "ORM"]
         },
         {
           "title": "IT Hulp aan Huis",
           "company": "Student aan huis",
           "period": "2023 - 2024",
-          "description": "Technische ondersteuning geboden aan particulieren. Helder communiceren stond centraal."
+          "description": "Technische ondersteuning geboden aan particulieren. Helder communiceren stond centraal.",
+          "technologies": []
         },
         {
           "title": "Webdesigner",
           "company": "Ommer Oase",
           "period": "2021 - heden",
-          "description": "Website ontworpen en onderhouden met focus op gebruiksgemak en uitstraling."
+          "description": "Website ontworpen en onderhouden met focus op gebruiksgemak en uitstraling.",
+          "technologies": []
         }
       ]
     },
