@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "../contexts/LanguageContext";
+import { generateMetadata, generateStructuredData } from "../utils/seo";
+import { siteConfig } from "../config/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,12 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Yorick te Riele - Portfolio",
-  description: "Full-stack developer passionate about creating innovative web solutions",
-  keywords: ["developer", "portfolio", "web development", "full-stack"],
-  authors: [{ name: "Yorick te Riele" }],
-};
+export const metadata: Metadata = generateMetadata();
 
 export const viewport = {
   width: "device-width",
@@ -31,7 +28,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="nl" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: generateStructuredData('person'),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: generateStructuredData('website'),
+          }}
+        />
+        <link rel="canonical" href={siteConfig.url} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >

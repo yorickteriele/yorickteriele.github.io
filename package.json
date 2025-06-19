@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "next build && touch out/.nojekyll",
-    "validate-languages": "node scripts/validate-languages.js"
+    "validate-languages": "node scripts/validate-languages.js",
+    "lighthouse": "echo 'Install lighthouse globally: npm install -g lighthouse' && lighthouse https://yorickteriele.nl --output=json"
   },
   "dependencies": {
     "react": "^19.0.0",
