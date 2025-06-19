@@ -4,13 +4,6 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Experience() {
   const { t } = useLanguage();
-  
-  // Define static technologies for each experience
-  const experienceTechnologies = [
-    ["React", "TypeScript", "Node.js", "AWS", "PostgreSQL"],
-    ["JavaScript", "React", "Express.js", "MongoDB", "Docker"],
-    ["HTML/CSS", "JavaScript", "PHP", "MySQL", "Git"]
-  ];
 
   return (
     <section id="experience" className="py-20">
@@ -43,17 +36,18 @@ export default function Experience() {
                 <p className="text-foreground/80 mb-4 leading-relaxed">
                   {exp.description}
                 </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {experienceTechnologies[index]?.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                  {exp.technologies && exp.technologies.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech: string) => (
+                      <span
+                        key={tech}
+                        className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>

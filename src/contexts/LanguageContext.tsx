@@ -29,14 +29,14 @@ export interface LanguageData {
     paragraph2: string;
     paragraph3: string;
     skillsTitle: string;
-  };
-  experience: {
+  };  experience: {
     title: string;
     items: Array<{
       title: string;
       company: string;
       period: string;
       description: string;
+      technologies?: string[];
     }>;
   };
   projects: {
