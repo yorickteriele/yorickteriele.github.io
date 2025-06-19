@@ -69,13 +69,9 @@ export function generateMetadata(options: {
     verification: {
       google: 'your-google-verification-code',
     },
-    
+      // Alternative languages - simplified for static export
     alternates: {
       canonical: url,
-      languages: {
-        'nl-NL': url,
-        'en-US': `${url}/en`,
-      },
     },
   };
 }
