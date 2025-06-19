@@ -21,7 +21,7 @@ export const siteConfig = {
     "JavaScript developer"
   ],
   
-  ogImage: "/og-image.png", 
+  ogImage: "/og-image.svg", // Simple SVG that works with static export 
   twitterHandle: "@yorickteriele", 
   
   location: "Nederland",

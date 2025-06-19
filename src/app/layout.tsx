@@ -30,6 +30,14 @@ export default function RootLayout({
   return (
     <html lang="nl" className="dark">
       <head>
+        <link rel="canonical" href={siteConfig.url} />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+      >
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -42,14 +50,6 @@ export default function RootLayout({
             __html: generateStructuredData('website'),
           }}
         />
-        <link rel="canonical" href={siteConfig.url} />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-      >
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
       </body>
     </html>
   );
