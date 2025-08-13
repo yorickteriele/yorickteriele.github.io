@@ -6,39 +6,30 @@ import { useLanguage } from "../contexts/LanguageContext";
 export default function Projects() {
   const { t } = useLanguage();
   
-  // Static project data that doesn't change between languages
   const projectsStaticData = [
     {
-      image: "/api/placeholder/400/300",
-      technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
-      github: "https://github.com/yorickteriele/ecommerce-platform",
-      demo: "https://ecommerce-demo.vercel.app",
+      image: "/Superelf.png",
+      technologies: ["C#", ".NET", "Node.js", "PostgreSQL", "GitHub Actions"],
+      github: "https://github.com/yorickteriele/Superelf",
+      demo: "https://superelf.yorickteriele.nl",
       featured: true
     },
     {
-      image: "/api/placeholder/400/300",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
-      github: "https://github.com/yorickteriele/task-manager",
-      demo: "https://task-manager-demo.vercel.app",
+      image: "/CaveRooms.png",
+      technologies: ["Unity", "C#", "Procedural Generation", "Voronoi Diagrams", "Perlin Noise", "Cellular Automata"],
+      github: "https://github.com/yorickteriele/CaveGame",
+      demo: "#",
       featured: true
     },
     {
-      image: "/api/placeholder/400/300",
-      technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
-      github: "https://github.com/yorickteriele/weather-dashboard",
-      demo: "https://weather-dashboard-demo.vercel.app",
-      featured: false
-    },
-    {
-      image: "/api/placeholder/400/300",
+      image: "/Portfolio.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/yorickteriele/portfolio",
-      demo: "https://yorickteriele.dev",
+      github: "https://github.com/yorickteriele/yorickteriele.github.io",
+      demo: "#",
       featured: false
     }
   ];
 
-  // Combine translated data with static data
   const projects = t.projects.items.map((project, index) => ({
     ...project,
     ...projectsStaticData[index]
@@ -62,10 +53,17 @@ export default function Projects() {
                 key={index}
                 className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="relative overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-muted-foreground">Project Image</span>
-                  </div>
+                <div className="relative overflow-hidden h-48">
+                  <img 
+                    src={project.image} 
+                    alt={`${project.title} screenshot`} 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback in case image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18945a6d4b3%20text%20%7B%20fill%3A%23999%3Bfont-weight%3Anormal%3Bfont-family%3A-apple-system%2CBlinkMacSystemFont%2C%26quot%3BSegoe%20UI%26quot%3B%2CRoboto%2C%26quot%3BHelvetica%20Neue%26quot%3B%2CArial%2C%26quot%3BNoto%20Sans%26quot%3B%2Csans-serif%2C%26quot%3BApple%20Color%20Emoji%26quot%3B%2C%26quot%3BSegoe%20UI%20Emoji%26quot%3B%2C%26quot%3BSegoe%20UI%20Symbol%26quot%3B%2C%26quot%3BNoto%20Color%20Emoji%26quot%3B%3Bfont-size%3A16px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18945a6d4b3%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23333%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22290.5"';
+                    }}
+                  />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex gap-4">
                       <Link
