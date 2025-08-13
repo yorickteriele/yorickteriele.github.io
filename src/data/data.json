@@ -27,6 +27,13 @@
       "title": "Experience",
       "items": [
         {
+          "title": "Bachelor of Software Engineering",
+          "company": "Windesheim University of Applied Sciences",
+          "period": "2023 - Present",
+          "description": "Studying software engineering, focusing on both frontend and backend development, teamwork, and modern methodologies.",
+          "technologies": ["Webdev", "C#", "Java", "Scrum"]
+        },
+        {
           "title": "Software Engineer Intern",
           "company": "djurve",
           "period": "2025",
@@ -52,7 +59,14 @@
     "projects": {
       "title": "Projects",
       "items": [
-        
+        {
+          "title": "Superelf Football Pool",
+          "description": "A web application where users can create pools, invite friends, and compete by selecting 15 unique Eredivisie clubs to score points based on player performances. Features include user authentication, real-time score updates, and a responsive interface."
+        },
+        {
+          "title": "Procedural Cave Generator",
+          "description": "A Unity project featuring procedurally generated caves using Voronoi noise and cellular automata. This project explores procedural generation techniques to create unique and interesting cave systems with smooth transitions between different terrain types."
+        },
         {
           "title": "Portfolio Website",
           "description": "This website! Built with modern frameworks to present my skills, experience, and projects."
@@ -105,6 +119,13 @@
       "title": "Ervaring",
       "items": [
         {
+          "title": "Bachelor of Software Engineering",
+          "company": "Windesheim University of Applied Sciences",
+          "period": "2023 - Present",
+          "description": "Studie Software Engineering met focus op frontend, backend, samenwerken en moderne ontwikkelmethodes",
+          "technologies": ["Webdev", "C#", "Java", "Scrum"]
+        },
+        {
           "title": "Stagiair Software Engineer",
           "company": "djurve",
           "period": "2025",
@@ -130,7 +151,14 @@
     "projects": {
       "title": "Projecten",
       "items": [
-        
+        {
+          "title": "Superelf Voetbal Pool",
+          "description": "Een webapplicatie waar gebruikers pools kunnen aanmaken, vrienden kunnen uitnodigen en kunnen strijden door 15 unieke Eredivisie clubs te selecteren om punten te scoren op basis van spelersprestaties. Met gebruikersauthenticatie, real-time score updates en een responsieve interface."
+        },
+        {
+          "title": "Procedurele Grot Generator",
+          "description": "Een Unity project met procedureel gegenereerde grotten gemaakt met Voronoi ruis en cellulaire automaten. Dit project onderzoekt procedurele generatietechnieken om unieke en interessante grotstelsels te creëren met vloeiende overgangen tussen verschillende terreintypen."
+        },
         {
           "title": "Portfolio Website",
           "description": "Deze site! Gemaakt met moderne webtechnieken om mijn werk te laten zien."

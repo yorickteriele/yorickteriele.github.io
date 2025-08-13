@@ -6,7 +6,7 @@ export default function About() {
   const { t } = useLanguage();
   const skills = [
     "TypeScript", "JavaScript", "React", "Next.js", "Node.js", "Python",
-    "C#", ".NET", "SQL", "MongoDB", "PostgreSQL", "Docker", "AWS", "Git"
+    ".NET/C#", "SQL", "PostgreSQL", "Docker", "Java"
   ];
 
   return (
