@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  
-  // Remove experimental and headers for static export
-  // These don't work with static export
 };
 
 export default nextConfig;

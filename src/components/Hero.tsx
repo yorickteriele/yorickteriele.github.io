@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 backdrop-blur-[2px]"></div>
       
       {/* Content */}
       <div className={`container mx-auto px-6 text-center z-10 transition-all duration-1000 ${
@@ -23,7 +23,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-muted-foreground mb-4">
             {t.hero.greeting}
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary/90 to-accent bg-clip-text text-transparent">
             {t.hero.title}
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8">

@@ -67,30 +67,6 @@ export default function Contact() {
               <p className="text-primary font-medium">@yorickteriele</p>
             </a>
           </div>
-          
-          {/* Quick Links */}
-          <div className="border-t border-border pt-8">
-            <p className="text-foreground/60 mb-6">
-              {t.contact.preferText}
-            </p>
-            <div className="flex justify-center gap-6">
-              <a
-                href="mailto:yorick.teriele@outlook.com"
-                className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium"
-              >
-                {t.contact.directEmail}
-              </a>
-              <span className="text-foreground/40">•</span>
-              <a
-                href="https://linkedin.com/in/yorickteriele"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium"
-              >
-                {t.contact.schedule}
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -1,14 +1,13 @@
 export const siteConfig = {
   name: "Yorick te Riele",
-  title: "Yorick te Riele - Full-Stack Developer Portfolio",
-  description: "Ervaren full-stack developer uit Nederland, gespecialiseerd in moderne web technologieën. Bekijk mijn projecten en ervaring in React, Next.js, TypeScript en meer.",
+  title: "Yorick te Riele - Software Engineer Portfolio",
+  description: "Software engineer uit Nederland met focus op C# en probleemoplossing. Ik bouw systemen en werk graag aan complexe technische uitdagingen.",
   url: "https://yorickteriele.nl",
   domain: "yorickteriele.nl",
   email: "yorick.teriele@outlook.com",
   
   keywords: [
     "Yorick te Riele",
-    "full-stack developer",
     "web developer Nederland", 
     "React developer",
     "Next.js developer",
@@ -21,7 +20,7 @@ export const siteConfig = {
     "JavaScript developer"
   ],
   
-  ogImage: "/og-image.svg", // Simple SVG that works with static export 
+  ogImage: "/og-image.svg", 
   twitterHandle: "@yorickteriele", 
   
   location: "Nederland",
@@ -32,17 +31,17 @@ export const siteConfig = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Yorick te Riele",
-    "jobTitle": "Full-Stack Developer",
-    "description": "Ervaren full-stack developer gespecialiseerd in moderne web technologieën",
+    "jobTitle": "Software Engineer",
+    "description": "Een software engineer met focus op backend en probleemoplossing",
     "url": "https://yorickteriele.nl",
     "email": "yorick.teriele@outlook.com",
     "addressLocality": "Nederland",
     "knowsAbout": [
       "JavaScript",
       "TypeScript", 
-      "React",
+      "C#",
       "Next.js",
-      "Node.js",
+      "C++",
       "Web Development",
       "Frontend Development",
       "Backend Development"

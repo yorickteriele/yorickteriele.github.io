@@ -1,133 +1,48 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import languageData from '../data/data.json';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import data from '../data/data.json';
 
-export type Language = 'en' | 'nl';
-
-export interface LanguageData {
-  code: string;
-  name: string;
-  flag: string;
-  header: {
-    about: string;
-    experience: string;
-    projects: string;
-    contact: string;
-  };
-  hero: {
-    greeting: string;
-    title: string;
-    subtitle: string;
-    description: string;
-    cta: string;
-  };
-  about: {
-    title: string;
-    greeting: string;
-    paragraph1: string;
-    paragraph2: string;
-    paragraph3: string;
-    skillsTitle: string;
-  };  experience: {
-    title: string;
-    items: Array<{
-      title: string;
-      company: string;
-      period: string;
-      description: string;
-      technologies?: string[];
-    }>;
-  };
-  projects: {
-    title: string;
-    items: Array<{
-      title: string;
-      description: string;
-    }>;
-  };
-  contact: {
-    title: string;
-    subtitle: string;
-    description: string;
-    email: string;
-    emailDescription: string;
-    linkedin: string;
-    linkedinDescription: string;
-    github: string;
-    githubDescription: string;
-    preferText: string;
-    directEmail: string;
-    schedule: string;
-  };
-  footer: {
-    copyright: string;
-  };
-}
+type Language = 'en' | 'nl';
 
 interface LanguageContextType {
-  currentLanguage: Language;
-  setLanguage: (language: Language) => void;
-  t: LanguageData;
-  availableLanguages: Array<{
-    code: Language;
-    name: string;
-    flag: string;
-  }>;
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: typeof data.en;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+  if (!context) {
+    throw new Error('useLanguage must be used within LanguageProvider');
   }
   return context;
 };
 
-interface LanguageProviderProps {
-  children: ReactNode;
-}
-
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>('en');
+export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
+  const [language, setCurrentLanguage] = useState<Language>('en');
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('portfolio-language') as Language;
-    if (savedLanguage && ['en', 'nl'].includes(savedLanguage)) {
-      setCurrentLanguage(savedLanguage);
+    const saved = localStorage.getItem('portfolio-language') as Language;
+    if (saved && (saved === 'en' || saved === 'nl')) {
+      setCurrentLanguage(saved);
     } else {
       const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith('nl')) {
-        setCurrentLanguage('nl');
-      } else {
-        setCurrentLanguage('en');
-      }
+      setCurrentLanguage(browserLang.startsWith('nl') ? 'nl' : 'en');
     }
   }, []);
 
-  const setLanguage = (language: Language) => {
-    setCurrentLanguage(language);
-    localStorage.setItem('portfolio-language', language);
+  const setLanguage = (lang: Language) => {
+    setCurrentLanguage(lang);
+    localStorage.setItem('portfolio-language', lang);
   };
-  const t = (languageData as Record<Language, LanguageData>)[currentLanguage];
 
-  const availableLanguages = Object.keys(languageData).map(code => ({
-    code: code as Language,
-    name: (languageData as Record<Language, LanguageData>)[code as Language].name,
-    flag: (languageData as Record<Language, LanguageData>)[code as Language].flag,
-  }));
-
-  const value = {
-    currentLanguage,
-    setLanguage,
-    t,
-    availableLanguages,
-  };
+  const t = data[language];
 
   return (
-    <LanguageContext.Provider value={value}>
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
