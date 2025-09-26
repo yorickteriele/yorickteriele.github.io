@@ -52,12 +52,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        
-        <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
-            Built with Next.js, TypeScript, and Tailwind CSS
-          </p>
-        </div>
       </div>
     </footer>
   );

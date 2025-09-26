@@ -2,14 +2,18 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
-import type { Language } from "../contexts/LanguageContext";
+
+const languages = [
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'nl', name: 'Nederlands', flag: '🇳🇱' }
+];
 
 export default function LanguageSwitcher() {
-  const { currentLanguage, setLanguage, availableLanguages } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentLang = availableLanguages.find(lang => lang.code === currentLanguage);
+  const currentLang = languages.find(lang => lang.code === language);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -24,7 +28,7 @@ export default function LanguageSwitcher() {
     };
   }, []);
   const handleLanguageChange = (languageCode: string) => {
-    setLanguage(languageCode as Language);
+    setLanguage(languageCode as 'en' | 'nl');
     setIsOpen(false);
   };
 
@@ -52,19 +56,19 @@ export default function LanguageSwitcher() {
 
       {isOpen && (
         <div className="absolute right-0 mt-2 py-2 w-48 bg-background border border-border rounded-md shadow-lg z-50">
-          {availableLanguages.map((language) => (
+          {languages.map((lang) => (
             <button
-              key={language.code}
-              onClick={() => handleLanguageChange(language.code)}
+              key={lang.code}
+              onClick={() => handleLanguageChange(lang.code)}
               className={`flex items-center space-x-3 w-full px-4 py-2 text-left hover:bg-accent transition-colors ${
-                currentLanguage === language.code 
+                language === lang.code 
                   ? 'bg-accent text-accent-foreground' 
                   : 'text-foreground'
               }`}
             >
-              <span className="text-lg">{language.flag}</span>
-              <span className="text-sm font-medium">{language.name}</span>
-              {currentLanguage === language.code && (
+              <span className="text-lg">{lang.flag}</span>
+              <span className="text-sm font-medium">{lang.name}</span>
+              {language === lang.code && (
                 <svg
                   className="w-4 h-4 ml-auto text-primary"
                   fill="none"

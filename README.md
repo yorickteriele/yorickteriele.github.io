@@ -1,2 +1,1 @@
-# https://yorickteriele.nl/
-
+# https://www.yorickteriele.nl/
