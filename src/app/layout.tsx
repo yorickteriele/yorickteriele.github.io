@@ -15,7 +15,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = generateMetadata();
+export const metadata: Metadata = {
+  ...generateMetadata(),
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
+};
 
 export const viewport = {
   width: "device-width",
