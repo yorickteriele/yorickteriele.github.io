@@ -6,34 +6,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 export default function Projects() {
   const { t } = useLanguage();
   
-  const projectsStaticData = [
-    {
-      image: "/Superelf.png",
-      technologies: ["C#", ".NET", "Node.js", "PostgreSQL", "GitHub Actions"],
-      github: "https://github.com/yorickteriele/Superelf",
-      demo: "https://superelf.yorickteriele.nl",
-      featured: true
-    },
-    {
-      image: "/CaveRooms.png",
-      technologies: ["Unity", "C#", "Procedural Generation", "Voronoi Diagrams", "Perlin Noise", "Cellular Automata"],
-      github: "https://github.com/yorickteriele/CaveGame",
-      demo: "#",
-      featured: true
-    },
-    {
-      image: "/Portfolio.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/yorickteriele/yorickteriele.github.io",
-      demo: "#",
-      featured: false
-    }
-  ];
-
-  const projects = t.projects.items.map((project, index) => ({
-    ...project,
-    ...projectsStaticData[index]
-  }));
+  const projects = t.projects.items;
 
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
@@ -47,53 +20,32 @@ export default function Projects() {
           </h2>
           
           {/* Featured Projects */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 md:items-stretch">
             {featuredProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-500 group"
+                className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-500 group flex flex-col"
               >
-                <div className="relative overflow-hidden h-48">
+                <div className="relative overflow-hidden h-48 flex-shrink-0">
                   <img 
                     src={project.image} 
                     alt={`${project.title} screenshot`} 
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      // Fallback in case image fails to load
                       const target = e.target as HTMLImageElement;
                       target.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18945a6d4b3%20text%20%7B%20fill%3A%23999%3Bfont-weight%3Anormal%3Bfont-family%3A-apple-system%2CBlinkMacSystemFont%2C%26quot%3BSegoe%20UI%26quot%3B%2CRoboto%2C%26quot%3BHelvetica%20Neue%26quot%3B%2CArial%2C%26quot%3BNoto%20Sans%26quot%3B%2Csans-serif%2C%26quot%3BApple%20Color%20Emoji%26quot%3B%2C%26quot%3BSegoe%20UI%20Emoji%26quot%3B%2C%26quot%3BSegoe%20UI%20Symbol%26quot%3B%2C%26quot%3BNoto%20Color%20Emoji%26quot%3B%3Bfont-size%3A16px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18945a6d4b3%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23333%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22290.5"';
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[1px] flex items-center justify-center">
-                    <div className="flex gap-4">
-                      <Link
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-background text-foreground px-4 py-2 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        Live Demo
-                      </Link>
-                      <Link
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-background text-foreground px-4 py-2 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        GitHub
-                      </Link>
-                    </div>
-                  </div>
                 </div>
                 
-                <div className="p-6">
+                <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {project.title}
                   </h3>
                   <p className="text-foreground/80 mb-4 leading-relaxed">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4 mt-auto">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -104,6 +56,31 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
+                <div className="px-6 pb-6 pt-0 flex-shrink-0">
+                  <div className="flex gap-4">
+                    {project.demo !== "" && (
+                      <Link
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-primary text-primary-foreground px-4 py-2.5 rounded-md hover:bg-primary/90 transition-colors flex-1 text-center font-medium"
+                      >
+                        Live Demo
+                      </Link>
+                    )}
+                    {project.github !== "" && (
+                      <Link
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-background border border-border text-foreground px-4 py-2.5 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors flex-1 text-center font-medium"
+                      >
+                        GitHub
+                      </Link>
+                    )}
+                  </div>
+                </div>
+
               </div>
             ))}
           </div>
@@ -118,7 +95,7 @@ export default function Projects() {
                 {otherProjects.map((project, index) => (
                   <div
                     key={index}
-                    className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300"
+                    className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300 flex flex-col"
                   >
                     <h4 className="text-lg font-semibold text-foreground mb-3">
                       {project.title}
@@ -136,23 +113,27 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    <div className="flex gap-3">
-                      <Link
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
-                      >
-                        Live Demo →
-                      </Link>
-                      <Link
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground/80 hover:text-foreground text-sm font-medium transition-colors"
-                      >
-                        GitHub →
-                      </Link>
+                    <div className="flex gap-3 mt-auto">
+                      {project.demo !== "" && (
+                        <Link
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                        >
+                          Live Demo →
+                        </Link>
+                      )}
+                      {project.github !== "" && (
+                        <Link
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/80 hover:text-foreground text-sm font-medium transition-colors"
+                        >
+                          GitHub →
+                        </Link>
+                      )}
                     </div>
                   </div>
                 ))}
