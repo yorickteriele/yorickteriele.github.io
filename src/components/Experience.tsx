@@ -2,9 +2,10 @@
 import { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { ChevronDown } from "lucide-react";
+import ExperienceDetailRenderer from "./ExperienceDetailRenderer";
 
 export default function Experience() {
-  const { t } = useLanguage();
+  const { t, experienceItems } = useLanguage();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -19,7 +20,7 @@ export default function Experience() {
           </h2>
           
           <div className="space-y-6">
-            {t.experience.items.map((exp, index) => (
+            {experienceItems.map((exp, index) => (
               <div
                 key={index}
                 className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-500"
@@ -67,7 +68,7 @@ export default function Experience() {
                   )}
 
                   {/* Expandable section trigger */}
-                  {exp.moreInfo && (
+                  {exp.detailType && exp.detailContent && (
                     <button
                       onClick={() => setOpenIndex(openIndex === index ? null : index)}
                       className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-300 group/btn"
@@ -84,7 +85,7 @@ export default function Experience() {
                   )}
 
                   {/* Expandable content */}
-                  {exp.moreInfo && (
+                  {exp.detailType && exp.detailContent && (
                     <div
                       className={`
                         grid transition-all duration-500 ease-in-out
@@ -98,8 +99,12 @@ export default function Experience() {
                             transform transition-all duration-500
                             ${openIndex === index ? "translate-y-0 scale-100" : "-translate-y-4 scale-95"}
                           `}
-                          dangerouslySetInnerHTML={{ __html: exp.moreInfo }}
-                        />
+                        >
+                          <ExperienceDetailRenderer 
+                            detailType={exp.detailType} 
+                            content={exp.detailContent} 
+                          />
+                        </div>
                       </div>
                     </div>
                   )}

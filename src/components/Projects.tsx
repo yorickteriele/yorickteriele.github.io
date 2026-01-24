@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Projects() {
-  const { t } = useLanguage();
+  const { t, projectItems } = useLanguage();
   
-  const projects = t.projects.items;
+  const projects = projectItems;
 
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);

@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Software Engineer Intern",
+    "company": "djurve",
+    "period": "2025",
+    "description": {
+      "en": "Developed a generic web editor for microservices architecture, contributing to software development tasks and learning professional workflows in a team setting.",
+      "nl": "Ontwikkelde een generieke webeditor voor microservices architectuur. Bijgedragen aan softwareprojecten en ervaring opgedaan in een professioneel team."
+    },
+    "technologies": [".NET/C#", "Svelte", "TypeScript", "SQL Server", "ORM"],
+    "detailType": "djurve-internship",
+    "detailContent": {
+      "en": {
+        "paragraphs": [
+          "During my internship at Djurve in 2025 for my semester WebDev, I had the opportunity to create a web editor that seamlessly integrates with various microservices, making it a breeze for employees to draft instructions. I implemented an HTML diff tool to tackle those pesky styling issues and designed a user-friendly document preview complete with a straightforward navigation bar for effortless browsing.",
+          "I took on full-stack responsibilities, fine-tuning the backend, refreshing the database, and developing a custom blob storage solution for images. I also made frontend components using Svelte and TypeScript. Working in a small Scrum team of two fellow students and two stakeholders, I contributed to gathering requirements, conducting research, designing, and reviewing code.",
+          "Additionally, I wrote unit and frontend tests using Playwright and collaborated on creating a shared library to ensure the editor functions consistently across all microservices. This internship truly provided me with invaluable hands-on experience with Azure, modern workflows, and the essence of teamwork. Some of these piplines architecture I still use for other projects.",
+          "Looking back, I learned a lot and it was a genuinely fun and rewarding project."
+        ],
+        "image": "/htmldiff.png",
+        "imageAlt": "HTML diff preview"
+      },
+      "nl": {
+        "paragraphs": [
+          "Tijdens mijn stage bij Djurve in 2025 voor mijn semester WebDev kreeg ik de kans om een webeditor te ontwikkelen die goed integreert met verschillende microservices, zodat medewerkers eenvoudig instructies konden opstellen. Ik implementeerde een HTML-diff tool om lastige opmaakverschillen te detecteren en ontwerpte een gebruiksvriendelijke documentweergave met een overzichtelijke navigatiebalk.",
+          "Ik werkte full-stack: verbeterde de backend, bracht aanpassingen toe aan de database en ontwikkelde een aangepaste blobopslag voor afbeeldingen. Aan de frontend maakte ik componenten met Svelte en TypeScript. In een klein Scrumteam met twee medestudenten en twee stakeholders hielp ik met het ophalen van eisen, onderzoek doen, ontwerpen en code reviewen.",
+          "Daarnaast schreef ik unit- en front-endtests met onder andere Playwright en Nunit en werkte ik mee aan een common library zodat de editor consistent bleef in alle microservices. Deze stage gaf me waardevolle praktijkervaring met Azure, moderne werkprocessen en teamwork. Een deel van de pipeline-architectuur gebruik ik nog steeds in andere projecten.",
+          "Terugkijkend heb ik ontzettend veel geleerd en vond ik het een leuke en waardevolle stage."
+        ],
+        "image": "/htmldiff.png",
+        "imageAlt": "HTML diff voorbeeld"
+      }
+    }
+  },
+  {
+    "title": "Bachelor of Software Engineering",
+    "company": "Windesheim University of Applied Sciences",
+    "period": "2023 - Present",
+    "description": {
+      "en": "Studying software engineering, focusing on both frontend and backend development, teamwork, and modern methodologies.",
+      "nl": "Studie Software Engineering met focus op frontend, backend, samenwerken en moderne ontwikkelmethodes"
+    },
+    "technologies": ["Webdev", "C#", "Java", "Scrum"],
+    "detailType": "windesheim-bachelor",
+    "detailContent": {
+      "en": {
+        "description": "During my Bachelor's in HBO-ICT Software Engineering at Windesheim, each semester involved a project of at least 10 weeks, completed in project groups. This gave me valuable experience with Scrum, teamwork, and communication with stakeholders, product owners, and colleagues. The program strongly emphasized functional and technical design before implementation, which helped me improve my planning, analysis, and problem-solving skills. I primarily worked with C#, with some exposure to Java, PHP, and Python. Even though I'm still completing my degree, the structure and variety of semester projects have provided a solid foundation in software design, collaboration, and practical development. Overall, I've learned a lot and strengthened both my technical and professional abilities.",
+        "semestersLabel": "These are my semesters:",
+        "year": "Year",
+        "currentLabel": "Current",
+        "upcomingLabel": "Upcoming"
+      },
+      "nl": {
+        "description": "Tijdens mijn HBO-ICT Software Engineering opleiding aan Windesheim werk ik elk semester aan een project van minimaal 10 weken in een projectgroep. Dit heeft me waardevolle ervaring opgeleverd met Scrum, samenwerken in een team en communicatie met stakeholders. De opleiding legt veel nadruk op functioneel en technisch ontwerp voor implementatie, waardoor ik mijn planning, analyse en probleemoplossend vermogen heb verbeterd. Ik werk voornamelijk met C#, met enige ervaring in Java, PHP en Python. Hoewel ik nog studeer, biedt de structuur en variatie van semesterprojecten een sterke basis in softwareontwikkeling en samenwerking.",
+        "semestersLabel": "Deze semesters heb ik gevolgd:",
+        "year": "Jaar",
+        "currentLabel": "Huidig",
+        "upcomingLabel": "Komend"
+      }
+    }
+  },
+  {
+    "title": "IT Support",
+    "company": "Student aan huis",
+    "period": "2023 - 2024",
+    "description": {
+      "en": "Helped people at home with tech-related issues and learned to communicate technical solutions clearly.",
+      "nl": "Helpt mensen thuis met technische problemen en leert om technische oplossingen duidelijk uit te leggen."
+    },
+    "technologies": []
+  },
+  {
+    "title": "Web Designer",
+    "company": "Ommer Oase",
+    "period": "2021 - Present",
+    "description": {
+      "en": "Designed and maintained the website of a local business with a focus on usability and design.",
+      "nl": "Ontworpen en onderhouden van de website van een lokaal bedrijf met focus op gebruiksvriendelijkheid en design."
+    },
+    "technologies": []
+  }
+]
