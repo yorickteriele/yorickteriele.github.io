@@ -1,0 +1,51 @@
+{
+  "common": {
+    "code": "nl",
+    "name": "Nederlands",
+    "flag": "🇳🇱"
+  },
+  "header": {
+    "about": "Over Mij",
+    "experience": "Ervaring",
+    "projects": "Projecten",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hoi, ik ben",
+    "title": "Yorick te Riele",
+    "subtitle": "Software Engineering Student",
+    "description": "Ik ben leergierig, creatief en gek op het bouwen van digitale oplossingen.",
+    "cta": "Stuur een bericht"
+  },
+  "about": {
+    "title": "Over Mij",
+    "greeting": "Leuk dat je er bent!",
+    "paragraph1": "Ik ben Yorick, een enthousiaste student Software Engineering uit Zwolle. Ik houd ervan om met technologie te werken en oplossingen te bouwen die écht iets doen.",
+    "paragraph2": "Nieuwe kennis opdoen en praktisch toepassen is wat mij drijft. Ik werk graag aan zowel frontend als backend en gebruik methodes zoals Scrum om efficiënt samen te werken.",
+    "paragraph3": "Naast mijn studie werk ik aan freelance projecten en verken ik graag nieuwe technologieën. Mijn doel is om elke dag een beetje beter te worden.",
+    "skillsTitle": "Vaardigheden & Technologieën"
+  },
+  "experience": {
+    "title": "Ervaring"
+  },
+  "projects": {
+    "title": "Projecten"
+  },
+  "contact": {
+    "title": "Laten we Connecten",
+    "subtitle": "Neem contact op",
+    "description": "Geïnteresseerd in samenwerking of contact? Ik hoor graag van je!",
+    "email": "E-mail",
+    "emailDescription": "Stuur een bericht",
+    "linkedin": "LinkedIn",
+    "linkedinDescription": "Professioneel connecten",
+    "github": "GitHub",
+    "githubDescription": "Bekijk mijn code",
+    "preferText": "Lieber een andere manier?",
+    "directEmail": "yorick.teriele@outlook.com",
+    "schedule": "Plan een afspraak"
+  },
+  "footer": {
+    "copyright": "Alle rechten voorbehouden"
+  }
+}

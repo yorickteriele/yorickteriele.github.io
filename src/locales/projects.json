@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Superelf Football Pool",
+    "description": {
+      "en": "A web application where users can create pools, invite friends, and compete by selecting 15 unique Eredivisie clubs to score points based on player performances. Features include user authentication, real-time score updates, and a responsive interface.",
+      "nl": "Een webapplicatie waarbij gebruikers pools kunnen aanmaken, vrienden uitnodigen en punten scoren door 15 unieke Eredivisieclubs te selecteren. Inclusief gebruikersauthenticatie, real-time score updates en responsive design."
+    },
+    "image": "/Superelf.png",
+    "technologies": ["C#", ".NET", "Node.js", "PostgreSQL", "GitHub Actions"],
+    "github": "https://github.com/yorickteriele/Superelf",
+    "demo": "https://superelf.yorickteriele.nl",
+    "featured": true
+  },
+  {
+    "title": "Procedural Cave Generator",
+    "description": {
+      "en": "A Unity project featuring procedurally generated caves using Voronoi noise and cellular automata. This project explores procedural generation techniques to create unique and interesting cave systems with smooth transitions between different terrain types.",
+      "nl": "Een Unity-project met procedurally gegenereerde grotten via Voronoi noise en cellular automata. Het onderzoekt technieken voor unieke en interessante grotten met vloeiende overgangen tussen terreintypes."
+    },
+    "image": "/CaveRooms.png",
+    "technologies": ["Unity", "C#", "Procedural Generation", "Voronoi Diagrams", "Perlin Noise", "Cellular Automata"],
+    "github": "https://github.com/yorickteriele/CaveGame",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "title": "Portfolio Website",
+    "description": {
+      "en": "This website! Built with modern frameworks to present my skills, experience, and projects.",
+      "nl": "Deze website! Gemaakt met moderne frameworks om mijn vaardigheden, ervaring en projecten te tonen."
+    },
+    "image": "/Portfolio.png",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "github": "https://github.com/yorickteriele/yorickteriele.github.io",
+    "demo": "",
+    "featured": false
+  },
+  {
+    "title": "Trading Bot - News Sentiment Analysis",
+    "description": {
+      "en": "An automated trading bot that analyzes news articles from multiple financial sources and makes stock trading decisions based on sentiment analysis using AI/ML models. Features include news sentiment analysis with FinBERT, automated trading via Alpaca API, risk management, and performance tracking.",
+      "nl": "Een automatische trading bot die nieuwsartikelen analyseert en aandelenbeslissingen maakt op basis van sentimentanalyse via AI/ML-modellen. Inclusief FinBERT-analyse, Alpaca API, risicomanagement en performance tracking."
+    },
+    "image": "/TradingBot.png",
+    "technologies": ["Python", "AI/ML", "PostgreSQL", "Alpaca API", "Async Processing"],
+    "github": "https://github.com/yorickteriele/TradingBot",
+    "demo": "https://trading.yorickteriele.nl/",
+    "featured": true
+  },
+  {
+    "title": "Web Development",
+    "description": {
+      "en": "Designed and maintained the website of a local business with a focus on usability and design.",
+      "nl": "Ontworpen en onderhouden van de website van een lokaal bedrijf met focus op gebruiksvriendelijkheid en design."
+    },
+    "image": "/OmmerOase.png",
+    "technologies": [],
+    "github": "https://www.github.com/yorickteriele/ommeroase",
+    "demo": "https://www.ommeroase.nl/",
+    "featured": false
+  }
+]

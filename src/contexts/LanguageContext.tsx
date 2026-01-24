@@ -1,14 +1,22 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import data from '../data/data.json';
-
-type Language = 'en' | 'nl';
+import type { Locale, Translations } from '@/types/i18n';
+import { 
+  getTranslations, 
+  getExperienceItems, 
+  getProjectItems, 
+  detectBrowserLocale,
+  isValidLocale,
+  defaultLocale 
+} from '@/lib/i18n';
 
 interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
-  t: typeof data.en;
+  locale: Locale;
+  setLocale: (locale: Locale) => void;
+  t: Translations;
+  experienceItems: ReturnType<typeof getExperienceItems>;
+  projectItems: ReturnType<typeof getProjectItems>;
 }
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
@@ -22,27 +30,37 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setCurrentLanguage] = useState<Language>('en');
+  const [locale, setCurrentLocale] = useState<Locale>(defaultLocale);
 
   useEffect(() => {
-    const saved = localStorage.getItem('portfolio-language') as Language;
-    if (saved && (saved === 'en' || saved === 'nl')) {
-      setCurrentLanguage(saved);
+    // Load saved locale from localStorage or detect browser locale
+    const saved = localStorage.getItem('portfolio-locale');
+    if (saved && isValidLocale(saved)) {
+      setCurrentLocale(saved);
     } else {
-      const browserLang = navigator.language.toLowerCase();
-      setCurrentLanguage(browserLang.startsWith('nl') ? 'nl' : 'en');
+      setCurrentLocale(detectBrowserLocale());
     }
   }, []);
 
-  const setLanguage = (lang: Language) => {
-    setCurrentLanguage(lang);
-    localStorage.setItem('portfolio-language', lang);
+  const setLocale = (newLocale: Locale) => {
+    setCurrentLocale(newLocale);
+    localStorage.setItem('portfolio-locale', newLocale);
   };
 
-  const t = data[language];
+  const t = getTranslations(locale);
+  const experienceItems = getExperienceItems(locale);
+  const projectItems = getProjectItems(locale);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider 
+      value={{ 
+        locale, 
+        setLocale, 
+        t, 
+        experienceItems, 
+        projectItems 
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
