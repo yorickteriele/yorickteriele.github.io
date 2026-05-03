@@ -1,13 +1,35 @@
 [
   {
+    "title": "Software Developer Intern",
+    "company": "ChipSoft B.V.",
+    "period": "2026 - Present",
+    "category": "work",
+    "description": {
+      "en": "Internship focused on software development in a professional healthcare software environment.",
+      "nl": "Stage gericht op softwareontwikkeling binnen een professionele zorgsoftware-omgeving."
+    },
+    "technologies": ["C#", ".NET", "SQL"],
+    "logo": "/logos/chipsoft.png",
+    "logoAlt": {
+      "en": "ChipSoft logo",
+      "nl": "ChipSoft logo"
+    }
+  },
+  {
     "title": "Software Engineer Intern",
     "company": "djurve",
     "period": "2025",
+    "category": "work",
     "description": {
       "en": "Developed a generic web editor for microservices architecture, contributing to software development tasks and learning professional workflows in a team setting.",
       "nl": "Ontwikkelde een generieke webeditor voor microservices architectuur. Bijgedragen aan softwareprojecten en ervaring opgedaan in een professioneel team."
     },
     "technologies": [".NET/C#", "Svelte", "TypeScript", "SQL Server", "ORM"],
+    "logo": "https://www.google.com/s2/favicons?domain=djurve.nl&sz=128",
+    "logoAlt": {
+      "en": "djurve logo",
+      "nl": "djurve logo"
+    },
     "detailType": "djurve-internship",
     "detailContent": {
       "en": {
@@ -36,11 +58,17 @@
     "title": "Bachelor of Software Engineering",
     "company": "Windesheim University of Applied Sciences",
     "period": "2023 - Present",
+    "category": "education",
     "description": {
       "en": "Studying software engineering, focusing on both frontend and backend development, teamwork, and modern methodologies.",
       "nl": "Studie Software Engineering met focus op frontend, backend, samenwerken en moderne ontwikkelmethodes"
     },
     "technologies": ["Webdev", "C#", "Java", "Scrum"],
+    "logo": "/logos/windesheim.png",
+    "logoAlt": {
+      "en": "Windesheim logo",
+      "nl": "Windesheim logo"
+    },
     "detailType": "windesheim-bachelor",
     "detailContent": {
       "en": {
@@ -60,23 +88,124 @@
     }
   },
   {
+    "title": "HBO ICT Propedeuse",
+    "company": "Windesheim University of Applied Sciences",
+    "period": "2023 - 2024",
+    "category": "education",
+    "description": {
+      "en": "Completed the first-year propaedeutic phase of HBO ICT at Windesheim.",
+      "nl": "Propedeuse HBO-ICT aan Hogeschool Windesheim behaald."
+    },
+    "technologies": ["C#", "Java", "Scrum"],
+    "logo": "/logos/windesheim.png",
+    "logoAlt": {
+      "en": "Windesheim logo",
+      "nl": "Windesheim logo"
+    }
+  },
+  {
+    "title": "HAVO",
+    "company": "Landstede, Thomas a Kempis Beroepscollege",
+    "period": "2018 - 2023",
+    "category": "education",
+    "description": {
+      "en": "Completed HAVO in Zwolle.",
+      "nl": "HAVO afgerond in Zwolle."
+    },
+    "technologies": [],
+    "logo": "/logos/thomas a kempis.jpg",
+    "logoAlt": {
+      "en": "Landstede logo",
+      "nl": "Landstede logo"
+    }
+  },
+  {
+    "title": "Scientific Computing with Python",
+    "company": "freeCodeCamp",
+    "period": "2022",
+    "category": "certificate",
+    "description": {
+      "en": "Earned a certificate covering Python fundamentals, algorithms, data structures, and scientific computing exercises.",
+      "nl": "Certificaat behaald voor Python-fundamentals, algoritmes, datastructuren en scientific computing-opdrachten."
+    },
+    "technologies": ["Python", "Scientific Computing"],
+    "logo": "/logos/freecodecamp.svg",
+    "logoAlt": {
+      "en": "freeCodeCamp logo",
+      "nl": "freeCodeCamp logo"
+    },
+    "links": [
+      {
+        "label": {
+          "en": "View certificate",
+          "nl": "Bekijk certificaat"
+        },
+        "href": "https://www.freecodecamp.org/certification/yorickteriele/scientific-computing-with-python"
+      }
+    ]
+  },
+  {
+    "title": "The 7 Habits of Highly Effective People",
+    "company": "FranklinCovey",
+    "period": "2026",
+    "category": "certificate",
+    "description": {
+      "en": "Completed certification focused on personal leadership, effectiveness, and collaboration habits.",
+      "nl": "Certificering afgerond gericht op persoonlijk leiderschap, effectiviteit en samenwerkingsgewoonten."
+    },
+    "technologies": ["Personal Development"],
+    "logo": "/logos/franklincovey.png",
+    "logoAlt": {
+      "en": "FranklinCovey logo",
+      "nl": "FranklinCovey logo"
+    }
+  },
+  {
     "title": "IT Support",
     "company": "Student aan huis",
     "period": "2023 - 2024",
+    "category": "work",
     "description": {
       "en": "Helped people at home with tech-related issues and learned to communicate technical solutions clearly.",
       "nl": "Helpt mensen thuis met technische problemen en leert om technische oplossingen duidelijk uit te leggen."
     },
-    "technologies": []
+    "technologies": [],
+    "logo": "/logos/studentaanhuis.png",
+    "logoAlt": {
+      "en": "Student aan huis logo",
+      "nl": "Student aan huis logo"
+    }
+  },
+  {
+    "title": "Shadow Internship Operational Specialist Intelligence",
+    "company": "Politie Oost-Nederland",
+    "period": "2022",
+    "category": "work",
+    "description": {
+      "en": "Shadowed an operational specialist intelligence role and gained insight into investigative and analytical work.",
+      "nl": "Meegelopen met een Operational Specialist Intelligence en inzicht gekregen in onderzoekend en analytisch werk."
+    },
+    "technologies": [],
+    "logo": "/logos/politie.png",
+    "logoAlt": {
+      "en": "Politie logo",
+      "nl": "Politie logo"
+    }
   },
   {
     "title": "Web Designer",
     "company": "Ommer Oase",
     "period": "2021 - Present",
+    "category": "work",
     "description": {
       "en": "Designed and maintained the website of a local business with a focus on usability and design.",
       "nl": "Ontworpen en onderhouden van de website van een lokaal bedrijf met focus op gebruiksvriendelijkheid en design."
     },
-    "technologies": []
+    "technologies": ["HTML", "CSS", "Web Design"],
+    "logo": "/logos/ommeroase.jpg",
+    "logoAlt": {
+      "en": "Ommer Oase logo",
+      "nl": "Ommer Oase logo"
+    }
   }
 ]

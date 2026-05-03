@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Printer } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Hero() {
@@ -91,6 +92,13 @@ export default function Hero() {
             className="border border-border text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/50 transition-colors"
           >
             {t.hero.cta}
+          </button>
+          <button
+            onClick={() => window.print()}
+            className="border border-border text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/50 transition-colors inline-flex items-center justify-center gap-2"
+          >
+            <Printer className="h-5 w-5" aria-hidden="true" />
+            CV
           </button>
         </div>
       </div>

@@ -26,7 +26,13 @@
     "skillsTitle": "Skills & Technologies"
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "all": "All",
+    "education": "Education",
+    "work": "Work Experience",
+    "certificates": "Certificates",
+    "showLess": "Show less",
+    "viewDetails": "View details"
   },
   "projects": {
     "title": "Projects"

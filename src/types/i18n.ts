@@ -38,6 +38,12 @@ export interface AboutTranslations {
 // Experience translations
 export interface ExperienceTranslations {
   title: string;
+  all: string;
+  education: string;
+  work: string;
+  certificates: string;
+  showLess: string;
+  viewDetails: string;
 }
 
 // Projects translations
@@ -83,8 +89,15 @@ export interface ExperienceItem {
   title: string;
   company: string;
   period: string;
+  category?: 'education' | 'work' | 'certificate';
   description: Record<Locale, string>;
   technologies: string[];
+  logo?: string;
+  logoAlt?: Record<Locale, string>;
+  links?: Array<{
+    label: Record<Locale, string>;
+    href: string;
+  }>;
   detailType?: string;
   detailContent?: Record<Locale, Record<string, unknown>>;
 }
