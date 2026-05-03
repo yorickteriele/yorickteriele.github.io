@@ -28,20 +28,41 @@ export function getExperienceItems(locale: Locale): Array<{
   title: string;
   company: string;
   period: string;
+  category: 'education' | 'work' | 'certificate';
   description: string;
   technologies: string[];
+  logo?: string;
+  logoAlt?: string;
+  links?: Array<{
+    label: string;
+    href: string;
+  }>;
   detailType?: string;
   detailContent?: Record<string, unknown>;
 }> {
-  return (experienceData as ExperienceItem[]).map(item => ({
-    title: item.title,
-    company: item.company,
-    period: item.period,
-    description: item.description[locale] || item.description[defaultLocale],
-    technologies: item.technologies,
-    detailType: item.detailType,
-    detailContent: item.detailContent?.[locale] || item.detailContent?.[defaultLocale],
-  }));
+  const getStartYear = (period: string): number => {
+    const match = period.match(/\d{4}/);
+    return match ? Number(match[0]) : Number.MAX_SAFE_INTEGER;
+  };
+
+  return (experienceData as ExperienceItem[])
+    .map(item => ({
+      title: item.title,
+      company: item.company,
+      period: item.period,
+      category: item.category || 'work',
+      description: item.description[locale] || item.description[defaultLocale],
+      technologies: item.technologies,
+      logo: item.logo,
+      logoAlt: item.logoAlt?.[locale] || item.logoAlt?.[defaultLocale],
+      links: item.links?.map(link => ({
+        label: link.label[locale] || link.label[defaultLocale],
+        href: link.href,
+      })),
+      detailType: item.detailType,
+      detailContent: item.detailContent?.[locale] || item.detailContent?.[defaultLocale],
+    }))
+    .sort((a, b) => getStartYear(b.period) - getStartYear(a.period));
 }
 
 /**

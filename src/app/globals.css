@@ -80,3 +80,165 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-accent;
 }
+
+.cv-print {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.72in;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: black !important;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.18;
+    overflow: visible !important;
+  }
+
+  .site-shell {
+    display: none !important;
+  }
+
+  .cv-print {
+    display: block;
+    position: relative;
+  }
+
+  .cv-print,
+  .cv-print * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: black !important;
+  }
+
+  .cv-print a {
+    color: #0000ee !important;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .cv-header {
+    align-items: flex-start;
+    border-bottom: 1px solid #5f86c6;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    margin-bottom: 18pt;
+    padding-bottom: 6pt;
+  }
+
+  .cv-header h1 {
+    font-size: 25pt;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .cv-header p,
+  .cv-header strong {
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 1;
+    margin: 6pt 0 0;
+  }
+
+  .cv-section {
+    break-inside: avoid;
+    margin-bottom: 14pt;
+  }
+
+  .cv-section h2 {
+    border-bottom: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    margin: 0 0 13pt;
+    padding-bottom: 3pt;
+    text-transform: uppercase;
+  }
+
+  .cv-section p {
+    margin: 0 0 5pt;
+  }
+
+  .cv-personal {
+    display: block;
+    min-height: 1.05in;
+    padding-right: 2.35in;
+  }
+
+  .cv-personal dl {
+    margin: 0;
+  }
+
+  .cv-personal div {
+    display: grid;
+    gap: 14pt;
+    grid-template-columns: 1.45in 1fr;
+  }
+
+  .cv-row {
+    display: grid;
+    gap: 14pt;
+    grid-template-columns: 1.45in 1fr;
+  }
+
+  .cv-personal dt {
+    font-weight: 400;
+  }
+
+  .cv-personal dd {
+    margin: 0;
+  }
+
+  .cv-personal img {
+    height: 2.95in;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 1.35in;
+    width: 2in;
+  }
+
+  .cv-intro {
+    margin-right: 2.35in;
+  }
+
+  .cv-row {
+    margin-bottom: 4pt;
+  }
+
+  .cv-row p {
+    margin-top: 2pt;
+  }
+
+  .cv-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8pt;
+    margin-top: 2pt;
+  }
+
+  .cv-links a {
+    font-size: 10pt;
+  }
+
+  .cv-page-break {
+    break-before: page;
+  }
+
+  .cv-print ul {
+    margin: 8pt 0 0 16pt;
+    padding: 0;
+  }
+
+  .cv-print li {
+    margin-bottom: 5pt;
+  }
+}

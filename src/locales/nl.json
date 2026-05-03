@@ -26,7 +26,13 @@
     "skillsTitle": "Vaardigheden & Technologieën"
   },
   "experience": {
-    "title": "Ervaring"
+    "title": "Ervaring",
+    "all": "Alles",
+    "education": "Opleidingen",
+    "work": "Werkervaring",
+    "certificates": "Certificaten",
+    "showLess": "Minder tonen",
+    "viewDetails": "Bekijk details"
   },
   "projects": {
     "title": "Projecten"
