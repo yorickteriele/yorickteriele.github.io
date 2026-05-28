@@ -38,7 +38,7 @@ const labels = {
     phone: "Phone:",
     email: "E-mail:",
     region: "Region:",
-    linkedin: "LinkedIn:",
+    licence: "Driving licence:",    linkedin: "LinkedIn:",
     portfolio: "Portfolio:",
     intro: "Introduction",
     education: "Education",
@@ -49,6 +49,8 @@ const labels = {
     technicalSkills: "Technical skills:",
     professionalSkills: "Professional skills:",
     languages: "Languages:",
+    hobbies: "Hobbies & Interests",
+    hobbiesText: "Football, running, tennis and reading.",
     projectIntro:
       "My personal and study projects, including more information, are available at:",
     professionalText:
@@ -63,7 +65,7 @@ const labels = {
     phone: "Telefoon:",
     email: "E-mail:",
     region: "Regio:",
-    linkedin: "LinkedIn:",
+    licence: "Rijbewijs:",    linkedin: "LinkedIn:",
     portfolio: "Portfolio:",
     intro: "Introductie",
     education: "Opleidingen",
@@ -74,6 +76,8 @@ const labels = {
     technicalSkills: "Technische vaardigheden:",
     professionalSkills: "Professionele vaardigheden:",
     languages: "Talen:",
+    hobbies: "Hobby's en Interesses",
+    hobbiesText: "Voetbal, hardlopen, tennis en lezen.",
     projectIntro:
       "Mijn persoonlijke en studieprojecten, waaronder meer informatie, zijn te vinden op:",
     professionalText:
@@ -138,16 +142,20 @@ export default function CVPrint() {
               <dt>{l.birthDate}</dt>
               <dd>{profile.birthDate[locale]}</dd>
             </div>
+            <div>
+              <dt>{l.region}</dt>
+              <dd>{profile.region}</dd>
+            </div>
+            <div>
+              <dt>{l.licence}</dt>
+              <dd>B</dd>
+            </div>
             {envPhone && (
               <div>
                 <dt>{l.phone}</dt>
                 <dd>{envPhone}</dd>
               </div>
             )}
-            <div>
-              <dt>{l.region}</dt>
-              <dd>{profile.region}</dd>
-            </div>
             <div>
               <dt>{l.email}</dt>
               <dd>
@@ -228,6 +236,11 @@ export default function CVPrint() {
         <p>
           <strong>{l.languages}</strong> {l.languageText}
         </p>
+      </section>
+
+      <section className="cv-section">
+        <h2>{l.hobbies}</h2>
+        <p>{l.hobbiesText}</p>
       </section>
     </article>
   );
