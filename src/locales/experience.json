@@ -18,7 +18,7 @@
   {
     "title": "Software Engineer Intern",
     "company": "ChipSoft B.V.",
-    "period": "2026 - Present",
+    "period": "Feb 2026 - Present",
     "category": "work",
     "description": {
       "en": "Internship focused on software development in a professional healthcare software environment.",
@@ -29,6 +29,22 @@
     "logoAlt": {
       "en": "ChipSoft logo",
       "nl": "ChipSoft logo"
+    }
+  },
+  {
+    "title": "Software Developer",
+    "company": "djurve",
+    "period": "Feb 2026 - Present",
+    "category": "work",
+    "description": {
+      "en": "Working as a Software Developer, contributing to software development projects.",
+      "nl": "Werkzaam als Software Ontwikkelaar, bijdragend aan softwareontwikkelingsprojecten."
+    },
+    "technologies": [],
+    "logo": "https://www.google.com/s2/favicons?domain=djurve.nl&sz=128",
+    "logoAlt": {
+      "en": "djurve logo",
+      "nl": "djurve logo"
     }
   },
   {
