@@ -1,5 +1,17 @@
 [
   {
+    "title": "Aresis",
+    "description": {
+      "en": "A comprehensive multi-tenant planning software platform featuring a complex backend architecture with .NET and a modern React frontend. Includes modules for user management, role-based access control, and organization-specific planning workflows.",
+      "nl": "Een uitgebreid multi-tenant planningssoftwareplatform met een complexe backend-architectuur in .NET en een moderne React-frontend. Bevat modules voor gebruikersbeheer, rolgebaseerde toegangscontrole en organisatie-specifieke planningsworkflows."
+    },
+    "image": "/Aresis.png",
+    "technologies": ["C#", ".NET", "React", "TypeScript", "PostgreSQL", "Docker", "Multi-tenancy"],
+    "github": "",
+    "demo": "https://www.aresis.nl",
+    "featured": true
+  },
+  {
     "title": "Superelf Football Pool",
     "description": {
       "en": "A web application where users can create pools, invite friends, and compete by selecting 15 unique Eredivisie clubs to score points based on player performances. Features include user authentication, real-time score updates, and a responsive interface.",
@@ -12,15 +24,27 @@
     "featured": true
   },
   {
-    "title": "Procedural Cave Generator",
+    "title": "Trading Bot - News Sentiment Analysis",
     "description": {
-      "en": "A Unity project featuring procedurally generated caves using Voronoi noise and cellular automata. This project explores procedural generation techniques to create unique and interesting cave systems with smooth transitions between different terrain types.",
-      "nl": "Een Unity-project met procedurally gegenereerde grotten via Voronoi noise en cellular automata. Het onderzoekt technieken voor unieke en interessante grotten met vloeiende overgangen tussen terreintypes."
+      "en": "An automated trading bot that analyzes news articles from multiple financial sources and makes stock trading decisions based on sentiment analysis using AI/ML models. Features include news sentiment analysis with FinBERT, automated trading via Alpaca API, risk management, and performance tracking.",
+      "nl": "Een automatische trading bot die nieuwsartikelen analyseert en aandelenbeslissingen maakt op basis van sentimentanalyse via AI/ML-modellen. Inclusief FinBERT-analyse, Alpaca API, risicomanagement en performance tracking."
     },
-    "image": "/CaveRooms.png",
-    "technologies": ["Unity", "C#", "Procedural Generation", "Voronoi Diagrams", "Perlin Noise", "Cellular Automata"],
-    "github": "https://github.com/yorickteriele/CaveGame",
-    "demo": "",
+    "image": "/TradingBot.png",
+    "technologies": ["Python", "AI/ML", "PostgreSQL", "Alpaca API", "Async Processing"],
+    "github": "https://github.com/yorickteriele/TradingBot",
+    "demo": "https://trading.yorickteriele.nl/",
+    "featured": true
+  },
+  {
+    "title": "ReadAloud",
+    "description": {
+      "en": "A Progressive Web App (PWA) designed to convert uploaded text into high-quality audio using AI-powered Text-to-Speech (TTS) services. Features include book/chapter management and a customized audio player.",
+      "nl": "Een Progressive Web App (PWA) ontworpen om geüploade tekst om te zetten in hoogwaardige audio via AI-gestuurde Text-to-Speech (TTS) diensten. Bevat boek- en hoofdstukbeheer en een aangepaste audiospeler."
+    },
+    "image": "/ReadAloud.png",
+    "technologies": ["ASP.NET Core", "React", "Redis", "PWA", "PostgreSQL"],
+    "github": "https://github.com/yorickteriele/ReadAloud",
+    "demo": "https://readaloud.yorickteriele.nl",
     "featured": true
   },
   {
@@ -36,18 +60,6 @@
     "featured": false
   },
   {
-    "title": "Trading Bot - News Sentiment Analysis",
-    "description": {
-      "en": "An automated trading bot that analyzes news articles from multiple financial sources and makes stock trading decisions based on sentiment analysis using AI/ML models. Features include news sentiment analysis with FinBERT, automated trading via Alpaca API, risk management, and performance tracking.",
-      "nl": "Een automatische trading bot die nieuwsartikelen analyseert en aandelenbeslissingen maakt op basis van sentimentanalyse via AI/ML-modellen. Inclusief FinBERT-analyse, Alpaca API, risicomanagement en performance tracking."
-    },
-    "image": "/TradingBot.png",
-    "technologies": ["Python", "AI/ML", "PostgreSQL", "Alpaca API", "Async Processing"],
-    "github": "https://github.com/yorickteriele/TradingBot",
-    "demo": "https://trading.yorickteriele.nl/",
-    "featured": true
-  },
-  {
     "title": "Web Development",
     "description": {
       "en": "Designed and maintained the website of a local business with a focus on usability and design.",
@@ -57,6 +69,42 @@
     "technologies": [],
     "github": "https://www.github.com/yorickteriele/ommeroase",
     "demo": "https://www.ommeroase.nl/",
+    "featured": false
+  },
+  {
+    "title": "Procedural Cave Generator",
+    "description": {
+      "en": "A Unity project featuring procedurally generated caves using Voronoi noise and cellular automata. This project explores procedural generation techniques to create unique and interesting cave systems with smooth transitions between different terrain types.",
+      "nl": "Een Unity-project met procedurally gegenereerde grotten via Voronoi noise en cellular automata. Het onderzoekt technieken voor unieke en interessante grotten met vloeiende overgangen tussen terreintypes."
+    },
+    "image": "/CaveRooms.png",
+    "technologies": ["Unity", "C#", "Procedural Generation", "Voronoi Diagrams", "Perlin Noise", "Cellular Automata"],
+    "github": "https://github.com/yorickteriele/CaveGame",
+    "demo": "https://cavegame.yorickteriele.nl",
+    "featured": false
+  },
+  {
+    "title": "Linux Development Environment & Automation",
+    "description": {
+      "en": "A fully automated, version-controlled Linux environment setup. Uses shell scripts and Git submodules to manage system configuration, desktop applications, and development tools, ensuring a consistent and reproducible workflow across machines.",
+      "nl": "Een volledig geautomatiseerde en versiebeheerde Linux-omgeving. Gebruikt shell-scripts en Git-submodules om systeemconfiguratie, desktopapplicaties en development tools te beheren voor een consistente workflow op elk systeem."
+    },
+    "image": "/window.svg",
+    "technologies": ["Bash", "Shell", "Linux", "Git Submodules", "Automation"],
+    "github": "https://github.com/yorickteriele/omarchy-supplement",
+    "demo": "",
+    "featured": false
+  },
+  {
+    "title": "YorVim",
+    "description": {
+      "en": "A highly modular and organized Neovim distribution based on LazyVim. Features a custom folder structure and pre-configured support for over 40 languages, LSP, Treesitter, and debugging tools.",
+      "nl": "Een modulaire en strak georganiseerde Neovim-distributie gebaseerd op LazyVim. Bevat een aangepaste mappenstructuur en geconfigureerde ondersteuning voor meer dan 40 talen, LSP, Treesitter en debugging-tools."
+    },
+    "image": "/file.svg",
+    "technologies": ["Lua", "Neovim", "LSP", "Treesitter", "LazyVim"],
+    "github": "https://github.com/yorickteriele/YorVim",
+    "demo": "",
     "featured": false
   }
 ]
