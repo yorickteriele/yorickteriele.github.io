@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useLanguage } from "../contexts/LanguageContext";
 
+const envPhone = process.env.NEXT_PUBLIC_PHONE;
+
 const profile = {
   name: "Yorick te Riele",
   birthDate: {
@@ -10,6 +12,7 @@ const profile = {
     nl: "6 juli 2006",
   },
   region: "Zwolle",
+  email: "yorick.teriele@outlook.com",
   linkedin: "www.linkedin.com/in/yorickteriele/",
   portfolio: "www.yorickteriele.nl/",
   skills: [
@@ -32,6 +35,8 @@ const labels = {
     personal: "Personal Details",
     name: "Name:",
     birthDate: "Date of birth:",
+    phone: "Phone:",
+    email: "E-mail:",
     region: "Region:",
     linkedin: "LinkedIn:",
     portfolio: "Portfolio:",
@@ -55,6 +60,8 @@ const labels = {
     personal: "Persoonlijke Gegevens",
     name: "Naam:",
     birthDate: "Geboortedatum:",
+    phone: "Telefoon:",
+    email: "E-mail:",
     region: "Regio:",
     linkedin: "LinkedIn:",
     portfolio: "Portfolio:",
@@ -131,9 +138,21 @@ export default function CVPrint() {
               <dt>{l.birthDate}</dt>
               <dd>{profile.birthDate[locale]}</dd>
             </div>
+            {envPhone && (
+              <div>
+                <dt>{l.phone}</dt>
+                <dd>{envPhone}</dd>
+              </div>
+            )}
             <div>
               <dt>{l.region}</dt>
               <dd>{profile.region}</dd>
+            </div>
+            <div>
+              <dt>{l.email}</dt>
+              <dd>
+                <a href={`mailto:${profile.email}`}>{profile.email}</a>
+              </dd>
             </div>
             <div>
               <dt>{l.linkedin}</dt>
@@ -181,7 +200,7 @@ export default function CVPrint() {
         </section>
       )}
 
-      <section className="cv-section cv-page-break">
+      <section className="cv-section">
         <h2>{l.projects}</h2>
         <p>{l.projectIntro}</p>
         <a href={`https://${profile.portfolio}`}>{profile.portfolio}</a>

@@ -116,13 +116,13 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
           {content.year} 4
         </div>
         <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
-          Pre-Master
+          Graduation: SE
           <span className="absolute bottom-2 right-2 text-xs bg-white/40 dark:bg-white/20 text-foreground-light font-semibold px-2 py-0.5 rounded-full">
             {content.upcomingLabel}
           </span>
         </div>
         <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
-          Graduation: SE
+          Pre-Master
           <span className="absolute bottom-2 right-2 text-xs bg-white/40 dark:bg-white/20 text-foreground-light font-semibold px-2 py-0.5 rounded-full">
             {content.upcomingLabel}
           </span>
