@@ -1,6 +1,22 @@
 [
   {
-    "title": "Software Developer Intern",
+    "title": "Founder & Lead Developer",
+    "company": "Aresis",
+    "period": "Mar 2026 - Present",
+    "category": "work",
+    "description": {
+      "en": "Working on a multi-tenant planning software platform, contributing to backend architecture and frontend development.",
+      "nl": "Werkzaam aan een multi-tenant planningssoftwareplatform, met bijdragen aan backendarchitectuur en frontendontwikkeling."
+    },
+    "technologies": ["C#", ".NET", "React", "TypeScript", "PostgreSQL", "Docker"],
+    "logo": "/logos/aresis.svg",
+    "logoAlt": {
+      "en": "Aresis logo",
+      "nl": "Aresis logo"
+    }
+  },
+  {
+    "title": "Software Engineer Intern",
     "company": "ChipSoft B.V.",
     "period": "2026 - Present",
     "category": "work",
