@@ -44,6 +44,7 @@ export interface ExperienceTranslations {
   certificates: string;
   showLess: string;
   viewDetails: string;
+  readMore: string;
 }
 
 // Projects translations
