@@ -7,11 +7,14 @@ import ExperienceDetailRenderer from "./ExperienceDetailRenderer";
 
 type ExperienceCategory = "all" | "education" | "work" | "certificate";
 
+const ALL_TAB_PREVIEW_COUNT = 3;
+
 export default function Experience() {
   const { t, experienceItems } = useLanguage();
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] =
     useState<ExperienceCategory>("all");
+  const [showAll, setShowAll] = useState(false);
   const categories: Array<{ key: ExperienceCategory; label: string }> = [
     { key: "all", label: t.experience.all },
     { key: "education", label: t.experience.education },
@@ -21,12 +24,18 @@ export default function Experience() {
   const visibleItems = experienceItems.filter(
     (exp) => activeCategory === "all" || exp.category === activeCategory,
   );
+  const isTruncated = activeCategory === "all" && !showAll;
+  const itemsToShow = isTruncated
+    ? visibleItems.slice(0, ALL_TAB_PREVIEW_COUNT)
+    : visibleItems;
+  const hasMore = visibleItems.length > ALL_TAB_PREVIEW_COUNT;
 
   const renderExperienceCard = (
     exp: (typeof experienceItems)[number],
     key: string,
   ) => {
     const isOpen = openKey === key;
+    const hasDetail = Boolean(exp.detailType && exp.detailContent);
 
     return (
       <div
@@ -106,7 +115,7 @@ export default function Experience() {
           )}
 
           {/* Expandable section trigger */}
-          {exp.detailType && exp.detailContent && (
+          {hasDetail && (
             <button
               onClick={() => setOpenKey(isOpen ? null : key)}
               className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-300 group/btn"
@@ -182,6 +191,7 @@ export default function Experience() {
                   onClick={() => {
                     setActiveCategory(category.key);
                     setOpenKey(null);
+                    setShowAll(false);
                   }}
                   className={`px-4 py-2 rounded-lg border text-sm font-semibold transition-colors ${
                     isActive
@@ -196,10 +206,34 @@ export default function Experience() {
           </div>
 
           <div className="space-y-6">
-            {visibleItems.map((exp, index) =>
+            {itemsToShow.map((exp, index) =>
               renderExperienceCard(exp, `${activeCategory}-${index}`),
             )}
           </div>
+
+          {isTruncated && hasMore && (
+            <div className="relative mt-6">
+              <div
+                className="max-h-28 overflow-hidden rounded-xl opacity-50 pointer-events-none select-none"
+                aria-hidden
+              >
+                {renderExperienceCard(
+                  visibleItems[ALL_TAB_PREVIEW_COUNT],
+                  `preview-${ALL_TAB_PREVIEW_COUNT}`,
+                )}
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+              <div className="absolute inset-x-0 bottom-0 flex justify-center translate-y-1/2">
+                <button
+                  type="button"
+                  onClick={() => setShowAll(true)}
+                  className="px-6 py-2.5 rounded-full border border-border bg-card font-semibold text-foreground shadow-sm hover:border-primary/50 hover:bg-secondary/60 transition-colors"
+                >
+                  {t.experience.readMore}
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

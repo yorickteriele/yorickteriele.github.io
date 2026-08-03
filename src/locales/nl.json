@@ -32,7 +32,8 @@
     "work": "Werkervaring",
     "certificates": "Certificaten",
     "showLess": "Minder tonen",
-    "viewDetails": "Bekijk details"
+    "viewDetails": "Bekijk details",
+    "readMore": "Meer tonen"
   },
   "projects": {
     "title": "Projecten"
