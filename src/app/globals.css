@@ -54,15 +54,12 @@
   }
 }
 
-html {
-  scroll-padding-top: 80px; 
-}
-
 body {
   font-family: var(--font-family-sans);
   line-height: 1.6;
-  overflow-y: scroll; 
-  overscroll-behavior-y: none; 
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+  scroll-padding-top: 80px;
 }
 
 ::-webkit-scrollbar {
