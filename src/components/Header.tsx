@@ -7,11 +7,17 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const { t } = useLanguage();
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50);
+      setIsHidden(scrollY > lastScrollY && scrollY > 100);
+      lastScrollY = scrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,6 +34,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
+        isHidden ? "-translate-y-full" : "translate-y-0"
+      } md:translate-y-0 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-md border-b border-border"
           : "bg-transparent"
