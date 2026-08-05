@@ -12,7 +12,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-24 pb-16">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 backdrop-blur-[2px]"></div>
 
