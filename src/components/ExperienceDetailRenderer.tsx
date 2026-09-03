@@ -101,24 +101,21 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
         <div className="flex items-center justify-center font-semibold text-foreground-light dark:text-foreground bg-card-light dark:bg-card border dark:border-border rounded-md p-4">
           {content.year} 3
         </div>
-        <div className="relative h-28 sm:h-32 rounded-xl bg-pink-500 text-card-foreground font-medium flex flex-col items-center justify-center shadow animate-pulse-slow">
+        <div className="h-28 sm:h-32 rounded-xl bg-blue-900 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
           Quality in Software Development
         </div>
-        <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
+        <div className="h-28 sm:h-32 rounded-xl bg-blue-900 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
           Internship (Level 3)
-          <span className="absolute bottom-2 right-2 text-xs bg-white/30 dark:bg-white/20 text-black font-semibold px-2 py-0.5 rounded-full">
-            {content.currentLabel}
-          </span>
         </div>
 
         {/* Year 4 */}
         <div className="flex items-center justify-center font-semibold text-foreground-light dark:text-foreground bg-card-light dark:bg-card border dark:border-border rounded-md p-4">
           {content.year} 4
         </div>
-        <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
+        <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow animate-pulse-slow">
           Graduation: SE
-          <span className="absolute bottom-2 right-2 text-xs bg-white/40 dark:bg-white/20 text-foreground-light font-semibold px-2 py-0.5 rounded-full">
-            {content.upcomingLabel}
+          <span className="absolute bottom-2 right-2 text-xs bg-white/30 dark:bg-white/20 text-black font-semibold px-2 py-0.5 rounded-full">
+            {content.currentLabel}
           </span>
         </div>
         <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
