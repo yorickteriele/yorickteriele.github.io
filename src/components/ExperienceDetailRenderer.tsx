@@ -101,10 +101,10 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
         <div className="flex items-center justify-center font-semibold text-foreground-light dark:text-foreground bg-card-light dark:bg-card border dark:border-border rounded-md p-4">
           {content.year} 3
         </div>
-        <div className="h-28 sm:h-32 rounded-xl bg-blue-900 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
+        <div className="h-28 sm:h-32 rounded-xl bg-pink-500 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
           Quality in Software Development
         </div>
-        <div className="h-28 sm:h-32 rounded-xl bg-blue-900 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
+        <div className="h-28 sm:h-32 rounded-xl bg-yellow-400 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
           Internship (Level 3)
         </div>
 
