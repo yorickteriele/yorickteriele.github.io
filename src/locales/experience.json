@@ -16,9 +16,25 @@
     }
   },
   {
+    "title": "Software Engineer Graduation Intern",
+    "company": "AFAS Software",
+    "period": "Sep 2026 - Present",
+    "category": "work",
+    "description": {
+      "en": "Graduation internship on the Product Development team, designing and building a modular identity-verification platform in C#/.NET to replace SMS/email verification and prepare for the EU Digital Identity Wallet (eIDAS 2.0).",
+      "nl": "Afstudeerstage bij de afdeling Product Development, waarbij ik een modulair identity-verificatieplatform in C#/.NET ontwerp en bouw ter vervanging van SMS/e-mailverificatie en met het oog op aansluiting op de EU Digital Identity Wallet (eIDAS 2.0)."
+    },
+    "technologies": ["C#", ".NET", "Identity & Access Management", "Architecture"],
+    "logo": "https://www.google.com/s2/favicons?domain=afas.nl&sz=128",
+    "logoAlt": {
+      "en": "AFAS Software logo",
+      "nl": "AFAS Software logo"
+    }
+  },
+  {
     "title": "Software Engineer Intern",
     "company": "ChipSoft B.V.",
-    "period": "Feb 2026 - Present",
+    "period": "Feb 2026 - Jun 2026",
     "category": "work",
     "description": {
       "en": "Internship focused on software development in a professional healthcare software environment.",
