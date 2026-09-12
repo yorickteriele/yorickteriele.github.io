@@ -1,5 +1,54 @@
 [
   {
+    "title": "Software Engineer Graduation Intern",
+    "company": "AFAS Software",
+    "period": "Sep 2026 - Present",
+    "category": "work",
+    "description": {
+      "en": "Graduation internship on the Product Development team, designing and building a modular identity-verification platform in C#/.NET to replace SMS/email verification and prepare for the EU Digital Identity Wallet (eIDAS 2.0).",
+      "nl": "Afstudeerstage bij de afdeling Product Development, waarbij ik een modulair identity-verificatieplatform in C#/.NET ontwerp en bouw ter vervanging van SMS/e-mailverificatie en met het oog op aansluiting op de EU Digital Identity Wallet (eIDAS 2.0)."
+    },
+    "technologies": ["C#", ".NET", "Identity & Access Management", "Architecture", "eIDAS 2.0 / EUDI Wallet"],
+    "logo": "https://www.google.com/s2/favicons?domain=afas.nl&sz=128",
+    "logoAlt": {
+      "en": "AFAS Software logo",
+      "nl": "AFAS Software logo"
+    },
+    "detailType": "afas-internship",
+    "detailContent": {
+      "en": {
+        "paragraphs": [
+          "For my graduation internship I joined the Product Development team at AFAS Software to design and build a modular identity-verification platform in C#/.NET. Within AFAS's ERP environment, SMS and email are currently the primary methods for identity verification during onboarding, digital signing and access management, but SMS is vulnerable to SIM-swapping and phishing and isn't future-proof.",
+          "The EU is rolling out the European Digital Identity Wallet (EUDI Wallet) under eIDAS 2.0, which lets citizens and organizations identify themselves and share attributes cryptographically. The goal of my assignment is a platform that can replace or extend the current SMS/email mechanism, fits within AFAS's existing architecture, and is prepared for future integration with the EUDI Wallet.",
+          "My work spans the full lifecycle: researching the current verification process and its risks and constraints, advising on how the new platform should be set up, designing the functional and technical architecture (components, data flows, API communication, error handling, authorization and verification flows), and building a working Proof of Concept that demonstrates the technical feasibility of the design.",
+          "I'm carrying out the assignment individually, guided by my company supervisor Peter Mols, while working alongside the team responsible for the module. Generative AI tooling (such as ChatGPT or Copilot) is explicitly permitted for this assignment, in line with how AFAS itself uses AI tooling internally."
+        ],
+        "highlightsLabel": "Key activities:",
+        "highlights": [
+          "Analyzing the current SMS/email verification flow and its security risks (e.g. SIM-swapping, phishing)",
+          "Designing a modular architecture prepared for future EUDI Wallet / eIDAS 2.0 integration",
+          "Producing functional and technical designs covering data flows, APIs, authorization and error handling",
+          "Building a Proof of Concept in C#/.NET to prove technical feasibility within AFAS's existing platform"
+        ]
+      },
+      "nl": {
+        "paragraphs": [
+          "Voor mijn afstudeerstage ben ik aan de slag gegaan bij de afdeling Product Development van AFAS Software, waar ik een modulair identity-verificatieplatform in C#/.NET ontwerp en bouw. Binnen de ERP-omgeving van AFAS worden momenteel SMS en e-mail gebruikt als primaire methode voor identiteitsverificatie bij onboarding, digitaal ondertekenen en toegangsbeheer. SMS is echter kwetsbaar voor SIM-swapping en phishing en is niet toekomstbestendig.",
+          "De Europese Unie ontwikkelt de European Digital Identity Wallet (EUDI Wallet) binnen eIDAS 2.0, waarmee burgers en organisaties zich cryptografisch kunnen identificeren en attributen kunnen delen. Het doel van mijn opdracht is een platform dat het huidige SMS/e-mailmechanisme kan vervangen of uitbreiden, past binnen de bestaande AFAS-architectuur en voorbereid is op toekomstige aansluiting op de EU Digital Identity Wallet.",
+          "Mijn werk bestrijkt het hele traject: het onderzoeken van de huidige verificatieprocessen en bijbehorende risico's en randvoorwaarden, het adviseren over de inrichting van het nieuwe platform, het ontwerpen van een toekomstbestendige functionele en technische architectuur (componenten, datastromen, API-communicatie, foutafhandeling, autorisatie en verificatieflows), en het realiseren van een Proof of Concept waarmee de technische haalbaarheid wordt aangetoond.",
+          "Ik voer de opdracht individueel uit onder begeleiding van mijn bedrijfsbegeleider Peter Mols, terwijl ik meedraai binnen het team dat aan de betreffende module werkt. Het gebruik van GenAI-tooling (zoals ChatGPT of Copilot) is voor deze opdracht expliciet toegestaan, aangezien AFAS zelf ook gebruikmaakt van AI-tooling."
+        ],
+        "highlightsLabel": "Belangrijkste activiteiten:",
+        "highlights": [
+          "Analyseren van het huidige SMS/e-mailverificatieproces en de bijbehorende beveiligingsrisico's (o.a. SIM-swapping, phishing)",
+          "Ontwerpen van een modulaire architectuur die voorbereid is op toekomstige aansluiting op de EUDI Wallet / eIDAS 2.0",
+          "Opstellen van functioneel en technisch ontwerp voor datastromen, API's, autorisatie en foutafhandeling",
+          "Bouwen van een Proof of Concept in C#/.NET om de technische haalbaarheid binnen de bestaande AFAS-omgeving aan te tonen"
+        ]
+      }
+    }
+  },
+  {
     "title": "Founder & Lead Developer",
     "company": "Aresis",
     "period": "Mar 2026 - Present",
@@ -16,35 +65,54 @@
     }
   },
   {
-    "title": "Software Engineer Graduation Intern",
-    "company": "AFAS Software",
-    "period": "Sep 2026 - Present",
-    "category": "work",
-    "description": {
-      "en": "Graduation internship on the Product Development team, designing and building a modular identity-verification platform in C#/.NET to replace SMS/email verification and prepare for the EU Digital Identity Wallet (eIDAS 2.0).",
-      "nl": "Afstudeerstage bij de afdeling Product Development, waarbij ik een modulair identity-verificatieplatform in C#/.NET ontwerp en bouw ter vervanging van SMS/e-mailverificatie en met het oog op aansluiting op de EU Digital Identity Wallet (eIDAS 2.0)."
-    },
-    "technologies": ["C#", ".NET", "Identity & Access Management", "Architecture"],
-    "logo": "https://www.google.com/s2/favicons?domain=afas.nl&sz=128",
-    "logoAlt": {
-      "en": "AFAS Software logo",
-      "nl": "AFAS Software logo"
-    }
-  },
-  {
     "title": "Software Engineer Intern",
     "company": "ChipSoft B.V.",
     "period": "Feb 2026 - Jun 2026",
     "category": "work",
     "description": {
-      "en": "Internship focused on software development in a professional healthcare software environment.",
-      "nl": "Stage gericht op softwareontwikkeling binnen een professionele zorgsoftware-omgeving."
+      "en": "Semester internship building a Proof of Concept that lets patients securely share wearable health data with the hospital through ChipSoft's patient app.",
+      "nl": "Semesterstage waarin ik een Proof of Concept bouwde waarmee patiënten wearable-gezondheidsdata veilig kunnen delen met het ziekenhuis via de ChipSoft-patiëntenapp."
     },
-    "technologies": ["C#", ".NET", "SQL"],
+    "technologies": ["C#", ".NET", ".NET MAUI", "SQL", "Apple HealthKit", "Google Health Connect"],
     "logo": "/logos/chipsoft.png",
     "logoAlt": {
       "en": "ChipSoft logo",
       "nl": "ChipSoft logo"
+    },
+    "detailType": "chipsoft-internship",
+    "detailContent": {
+      "en": {
+        "paragraphs": [
+          "During my semester internship at ChipSoft I worked for about 5 months on the project \"Meetwaardes Wearable Mobile\". Within this assignment I researched, designed and built a Proof of Concept that lets medical measurements from wearables be securely shared, via the ChipSoft patient app, with the right hospital and ultimately processed into HiX, ChipSoft's electronic patient record system.",
+          "The focus was on retrieving, processing and transmitting wearable data such as heart rate, blood pressure and oxygen saturation. This required accounting for patient consent, differences between hospitals, privacy, security, data structures and possible offline scenarios. I researched Apple HealthKit and Google Health Connect, and worked out how wearable data could be normalized and mapped to a format compatible with HiX.",
+          "I also wrote a full requirements analysis: gathering requirements from stakeholders across Mobile, I&S and measurement specialists, prioritizing them with MoSCoW, and grouping them into epics such as data requests by care providers, patient consent, wearable coupling, retrieving and processing measurements, and result/history for both care providers and patients. Each epic was backed by a risk analysis with concrete, scored risks and mitigating security measures, aligned with AVG (GDPR) and NEN7510.",
+          "Based on that analysis I produced a functional and technical design and then built a working PoC with mobile functionality for patient consent and retrieving measurements, plus a backend mock demonstrating the processing and hand-off of data. I worked with C#, .NET, .NET MAUI and the ChipSoft framework. This internship gave me a lot of experience with mobile development, healthcare software, software architecture, privacy-by-design, data mapping, testing and working professionally in an R&D environment."
+        ],
+        "highlightsLabel": "Key activities:",
+        "highlights": [
+          "Requirements analysis (MoSCoW, epics, traceability) based on stakeholder interviews and research",
+          "Risk analysis and mitigating security measures aligned with AVG (GDPR) and NEN7510",
+          "Researching Apple HealthKit and Google Health Connect for retrieving wearable measurements",
+          "Designing the data mapping from wearable data to ChipSoft's HiX-compatible internal schema",
+          "Building a mobile PoC (.NET MAUI) for consent and data retrieval, with a backend mock for processing"
+        ]
+      },
+      "nl": {
+        "paragraphs": [
+          "Tijdens mijn semester stage bij ChipSoft werkte ik ongeveer 5 maanden aan het project \"Meetwaardes Wearable Mobile\". Binnen deze opdracht onderzocht, ontwierp en realiseerde ik een Proof of Concept waarmee medische meetwaardes uit wearables via de ChipSoft-patiëntenapp veilig gedeeld kunnen worden met het juiste ziekenhuis en uiteindelijk verwerkt kunnen worden binnen HiX, het elektronisch patiëntendossier van ChipSoft.",
+          "De focus lag op het ophalen, verwerken en versturen van wearable-data, zoals hartslag, bloeddruk en zuurstofsaturatie. Hierbij moest rekening worden gehouden met toestemming van de patiënt, verschillen tussen ziekenhuizen, privacy, beveiliging, datastructuren en mogelijke offline situaties. Ik onderzocht onder andere Apple HealthKit en Google Health Connect en werkte uit hoe wearable-data genormaliseerd en gemapt kan worden naar een formaat dat aansluit op HiX.",
+          "Daarnaast schreef ik een volledige requirementsanalyse: ik haalde requirements op bij stakeholders binnen Mobile, I&S en specialisten op het gebied van meetwaardes, prioriteerde deze met MoSCoW en groepeerde ze in epics zoals data-opvraag door zorgverleners, toestemming van de patiënt, wearable-koppeling, het ophalen en verwerken van meetwaardes, en het resultaat/de historie voor zowel zorgverlener als patiënt. Elke epic werd onderbouwd met een risicoanalyse inclusief scores en mitigerende securitymaatregelen, afgestemd op de AVG en NEN7510.",
+          "Op basis van deze analyse stelde ik een functioneel en technisch ontwerp op en ontwikkelde ik vervolgens een werkende PoC met mobiele functionaliteit voor toestemming en het ophalen van meetwaardes, plus een backend-mock waarmee de verwerking en doorgifte van data kon worden aangetoond. Ik werkte met C#, .NET, .NET MAUI en het ChipSoft-framework. De stage gaf mij veel ervaring met mobiele ontwikkeling, zorgsoftware, softwarearchitectuur, privacy-by-design, datamapping, testen en professioneel samenwerken binnen een R&D-omgeving."
+        ],
+        "highlightsLabel": "Belangrijkste activiteiten:",
+        "highlights": [
+          "Requirementsanalyse (MoSCoW, epics, traceability) op basis van stakeholderinterviews en onderzoek",
+          "Risicoanalyse en mitigerende securitymaatregelen afgestemd op AVG en NEN7510",
+          "Onderzoek naar Apple HealthKit en Google Health Connect voor het ophalen van wearable-meetwaardes",
+          "Ontwerpen van de datamapping van wearable-data naar het HiX-compatibele interne schema van ChipSoft",
+          "Bouwen van een mobiele PoC (.NET MAUI) voor toestemming en dataophaal, met een backend-mock voor verwerking"
+        ]
+      }
     }
   },
   {
