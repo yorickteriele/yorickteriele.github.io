@@ -1,20 +1,22 @@
-interface DjurveInternshipProps {
+interface InternshipDetailProps {
   content: {
     paragraphs: string[];
-    image: string;
-    imageAlt: string;
+    image?: string;
+    imageAlt?: string;
+    highlightsLabel?: string;
+    highlights?: string[];
   };
 }
 
-function DjurveInternshipDetail({ content }: DjurveInternshipProps) {
+function InternshipDetail({ content }: InternshipDetailProps) {
   return (
     <div className="space-y-4">
       <p className="text-foreground/80 leading-relaxed">{content.paragraphs[0]}</p>
       {content.image && (
         <div className="mt-2">
-          <img 
-            src={content.image} 
-            alt={content.imageAlt} 
+          <img
+            src={content.image}
+            alt={content.imageAlt}
             className="rounded shadow-md w-full"
           />
         </div>
@@ -24,6 +26,20 @@ function DjurveInternshipDetail({ content }: DjurveInternshipProps) {
           {paragraph}
         </p>
       ))}
+      {content.highlights && content.highlights.length > 0 && (
+        <div>
+          {content.highlightsLabel && (
+            <p className="text-foreground-light dark:text-foreground font-medium mb-2">
+              {content.highlightsLabel}
+            </p>
+          )}
+          <ul className="list-disc list-inside space-y-1 text-foreground/80 leading-relaxed">
+            {content.highlights.map((highlight, idx) => (
+              <li key={idx}>{highlight}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
@@ -147,7 +163,9 @@ interface ExperienceDetailRendererProps {
 export default function ExperienceDetailRenderer({ detailType, content }: ExperienceDetailRendererProps) {
   switch (detailType) {
     case 'djurve-internship':
-      return <DjurveInternshipDetail content={content as DjurveInternshipProps['content']} />;
+    case 'chipsoft-internship':
+    case 'afas-internship':
+      return <InternshipDetail content={content as InternshipDetailProps['content']} />;
     case 'windesheim-bachelor':
       return <WindesheimBachelorDetail content={content as WindesheimBachelorProps['content']} />;
     default:
