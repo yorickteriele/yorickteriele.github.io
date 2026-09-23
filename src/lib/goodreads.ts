@@ -51,7 +51,7 @@ function fullSizeCover(src: string) {
   return src.replace(/\._S[XY]\d+_(?=\.\w+$)/, "");
 }
 
-function parseWidget(container: HTMLElement): Book[] {
+function parseWidget(container: ParentNode): Book[] {
   const entries = container.querySelectorAll<HTMLElement>(
     '[class^="gr_custom_each_container"]',
   );
@@ -65,8 +65,8 @@ function parseWidget(container: HTMLElement): Book[] {
     return {
       title: titleLink?.textContent?.trim() ?? "",
       author: authorLink?.textContent?.trim() ?? "",
-      cover: cover ? fullSizeCover(cover.src) : "",
-      url: titleLink?.href.split("?")[0] ?? "",
+      cover: cover ? fullSizeCover(cover.getAttribute("src") ?? "") : "",
+      url: titleLink?.getAttribute("href")?.split("?")[0] ?? "",
       rating: activeStars.length,
     };
   }).filter((book) => book.title);
@@ -74,8 +74,8 @@ function parseWidget(container: HTMLElement): Book[] {
 
 /**
  * Loads a Goodreads shelf live in the browser by running Goodreads' own
- * custom-widget script into a hidden container, then parsing its markup so
- * it can be rendered with the site's styling. Returns `fallback` until the
+ * custom-widget script and parsing the markup it writes, so it can be
+ * rendered with the site's styling. Returns `fallback` until the
  * live data arrives, or if Goodreads can't be reached.
  */
 export function useGoodreadsShelf(options: ShelfOptions, fallback: Book[]) {
@@ -86,15 +86,22 @@ export function useGoodreadsShelf(options: ShelfOptions, fallback: Book[]) {
     const container = document.createElement("div");
     container.id = `gr_custom_widget_${options.widgetId}`;
     container.hidden = true;
+    // Catch the markup the widget assigns and parse it off-document, so the
+    // thumbnails in it are never downloaded.
+    let markup: string | null = null;
+    Object.defineProperty(container, "innerHTML", {
+      set(html: string) {
+        markup = html;
+      },
+    });
     document.body.appendChild(container);
 
     const script = document.createElement("script");
     script.src = src;
     script.async = true;
     script.onload = () => {
-      const parsed = parseWidget(container);
-      if (parsed.length > 0 || container.childElementCount > 0) {
-        setBooks(parsed);
+      if (markup !== null) {
+        setBooks(parseWidget(new DOMParser().parseFromString(markup, "text/html")));
       }
       container.remove();
     };
