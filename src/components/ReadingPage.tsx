@@ -9,6 +9,8 @@ import BookCard from "./BookCard";
 
 // Two rows at every breakpoint: 2, 3 and 5 columns.
 const SHELF_SIZE = 10;
+// Books loaded per shelf, used for the counter next to the title.
+const COUNT_LIMIT = 100;
 
 function visibilityClass(index: number) {
   if (index >= 6) return "hidden lg:flex";
@@ -41,7 +43,12 @@ function ShelfSection({
   return (
     <section id={id} className="mb-20">
       <div className="flex items-center justify-between gap-4 mb-8 border-b border-border pb-4">
-        <h2 className="text-3xl font-bold text-foreground">{title}</h2>
+        <h2 className="text-3xl font-bold text-foreground">
+          {title}
+          <span className="ml-3 text-lg font-medium text-foreground/60">
+            {items.length >= COUNT_LIMIT ? `${COUNT_LIMIT}+` : items.length}
+          </span>
+        </h2>
         <a
           href={shelfUrl(shelf)}
           target="_blank"
@@ -76,7 +83,7 @@ export default function ReadingPage() {
   const { t } = useLanguage();
 
   const read = useGoodreadsShelf(
-    { shelf: "read", widgetId: "1790153628", numBooks: SHELF_SIZE, sort: "date_read" },
+    { shelf: "read", widgetId: "1790153628", numBooks: COUNT_LIMIT, sort: "date_read" },
     fallbackRead,
   );
   const current = useGoodreadsShelf(
@@ -84,7 +91,7 @@ export default function ReadingPage() {
     [],
   );
   const toRead = useGoodreadsShelf(
-    { shelf: "to-read", widgetId: "1790153906", numBooks: SHELF_SIZE, sort: "date_added" },
+    { shelf: "to-read", widgetId: "1790153906", numBooks: COUNT_LIMIT, sort: "date_added" },
     fallbackToRead,
   );
 
