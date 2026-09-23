@@ -14,6 +14,7 @@ export interface HeaderTranslations {
   experience: string;
   projects: string;
   contact: string;
+  reading: string;
 }
 
 // Hero translations
