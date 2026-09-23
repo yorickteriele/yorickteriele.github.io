@@ -21,13 +21,19 @@ function ShelfSection({
   title,
   shelf,
   books,
+  currentlyReading = [],
 }: {
   id: string;
   title: string;
   shelf: Shelf;
   books: Book[];
+  currentlyReading?: Book[];
 }) {
   const { t } = useLanguage();
+  const items = [
+    ...currentlyReading.map((book) => ({ book, tag: t.reading.currentlyReading })),
+    ...books.map((book) => ({ book, tag: undefined })),
+  ];
 
   return (
     <section id={id} className="mb-20">
@@ -44,13 +50,14 @@ function ShelfSection({
         </a>
       </div>
 
-      {books.length > 0 ? (
+      {items.length > 0 ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-          {books.slice(0, SHELF_SIZE).map((book, index) => (
+          {items.slice(0, SHELF_SIZE).map(({ book, tag }, index) => (
             <BookCard
               key={book.url}
               book={book}
               byLabel={t.reading.by}
+              tag={tag}
               className={visibilityClass(index)}
             />
           ))}
@@ -68,6 +75,10 @@ export default function ReadingPage() {
   const read = useGoodreadsShelf(
     { shelf: "read", widgetId: "1790153628", numBooks: SHELF_SIZE, sort: "date_read" },
     fallbackRead,
+  );
+  const current = useGoodreadsShelf(
+    { shelf: "currently-reading", widgetId: "1790153907", numBooks: SHELF_SIZE, sort: "date_updated" },
+    [],
   );
   const toRead = useGoodreadsShelf(
     { shelf: "to-read", widgetId: "1790153906", numBooks: SHELF_SIZE, sort: "date_added" },
@@ -95,7 +106,7 @@ export default function ReadingPage() {
             </p>
           </div>
 
-          <ShelfSection id="to-read" title={t.reading.toRead} shelf="to-read" books={toRead} />
+          <ShelfSection id="to-read" title={t.reading.toRead} shelf="to-read" books={toRead} currentlyReading={current} />
           <ShelfSection id="read" title={t.reading.read} shelf="read" books={read} />
         </div>
       </div>
