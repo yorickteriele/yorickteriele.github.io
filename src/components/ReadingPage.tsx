@@ -32,7 +32,10 @@ function ShelfSection({
   const { t } = useLanguage();
   const items = [
     ...currentlyReading.map((book) => ({ book, tag: t.reading.currentlyReading })),
-    ...books.map((book) => ({ book, tag: undefined })),
+    // A book being read can still show up on the to-read shelf; list it once.
+    ...books
+      .filter((book) => !currentlyReading.some((current) => current.url === book.url))
+      .map((book) => ({ book, tag: undefined })),
   ];
 
   return (
