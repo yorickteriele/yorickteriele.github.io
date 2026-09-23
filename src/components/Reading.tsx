@@ -22,8 +22,8 @@ export default function Reading() {
     fallbackRead.slice(0, UPDATE_COUNT),
   );
   const toRead = useGoodreadsShelf(
-    { shelf: "to-read", widgetId: "1790153003", numBooks: 1, sort: "date_added" },
-    fallbackToRead.slice(0, 1),
+    { shelf: "to-read", widgetId: "1790153003", numBooks: 2, sort: "date_added" },
+    fallbackToRead.slice(0, 2),
   );
 
   // Currently reading first, then the latest finished book and newest
@@ -31,7 +31,10 @@ export default function Reading() {
   const updates: Array<{ kind: UpdateKind; book: Book }> = [
     ...current.map((book) => ({ kind: "currentlyReading" as const, book })),
     ...read.slice(0, 1).map((book) => ({ kind: "finished" as const, book })),
-    ...toRead.slice(0, 1).map((book) => ({ kind: "wantToRead" as const, book })),
+    ...toRead
+      .filter((book) => !current.some((c) => c.url === book.url))
+      .slice(0, 1)
+      .map((book) => ({ kind: "wantToRead" as const, book })),
     ...read.slice(1).map((book) => ({ kind: "finished" as const, book })),
   ].slice(0, UPDATE_COUNT);
 
