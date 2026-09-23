@@ -52,6 +52,20 @@
     "directEmail": "yorick.teriele@outlook.com",
     "schedule": "Plan een afspraak"
   },
+  "reading": {
+    "title": "Lezen",
+    "description": "Wat ik de laatste tijd lees, rechtstreeks van mijn Goodreads-planken.",
+    "latestUpdates": "Laatste updates",
+    "currentlyReading": "Nu aan het lezen",
+    "finished": "Uitgelezen",
+    "wantToRead": "Wil ik lezen",
+    "by": "door",
+    "viewMore": "Bekijk meer",
+    "read": "Gelezen",
+    "toRead": "Nog te lezen",
+    "empty": "Nog geen boeken op deze plank.",
+    "backHome": "Terug naar home"
+  },
   "footer": {
     "copyright": "Alle rechten voorbehouden"
   }

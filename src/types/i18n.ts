@@ -68,6 +68,22 @@ export interface ContactTranslations {
   schedule: string;
 }
 
+// Reading translations
+export interface ReadingTranslations {
+  title: string;
+  description: string;
+  latestUpdates: string;
+  currentlyReading: string;
+  finished: string;
+  wantToRead: string;
+  by: string;
+  viewMore: string;
+  read: string;
+  toRead: string;
+  empty: string;
+  backHome: string;
+}
+
 // Footer translations
 export interface FooterTranslations {
   copyright: string;
@@ -82,6 +98,7 @@ export interface Translations {
   experience: ExperienceTranslations;
   projects: ProjectsTranslations;
   contact: ContactTranslations;
+  reading: ReadingTranslations;
   footer: FooterTranslations;
 }
 
