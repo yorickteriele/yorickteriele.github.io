@@ -35,15 +35,30 @@ export function BookCover({ book, className }: { book: Book; className: string }
   );
 }
 
-export default function BookCard({ book, byLabel }: { book: Book; byLabel: string }) {
+export default function BookCard({
+  book,
+  byLabel,
+  className = "",
+  tag,
+}: {
+  book: Book;
+  byLabel: string;
+  className?: string;
+  tag?: string;
+}) {
   return (
     <a
       href={book.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+      className={`group flex flex-col bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300 ${className}`}
     >
-      <div className="aspect-[2/3] overflow-hidden bg-muted">
+      <div className="relative aspect-[2/3] overflow-hidden bg-muted">
+        {tag && (
+          <span className="absolute top-2 left-2 z-10 bg-primary text-primary-foreground px-2 py-0.5 rounded-full text-xs font-medium shadow">
+            {tag}
+          </span>
+        )}
         {book.cover ? (
           <img
             src={book.cover}

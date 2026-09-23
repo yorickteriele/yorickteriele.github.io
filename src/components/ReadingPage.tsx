@@ -7,51 +7,64 @@ import { shelfUrl, useGoodreadsShelf, type Book, type Shelf } from "@/lib/goodre
 import { fallbackRead, fallbackToRead } from "@/data/goodreads-fallback";
 import BookCard from "./BookCard";
 
-const SHELF_SIZE = 50;
+// Two rows at every breakpoint: 2, 3 and 5 columns.
+const SHELF_SIZE = 10;
+
+function visibilityClass(index: number) {
+  if (index >= 6) return "hidden lg:flex";
+  if (index >= 4) return "hidden sm:flex";
+  return "";
+}
 
 function ShelfSection({
   id,
   title,
   shelf,
   books,
+  currentlyReading = [],
 }: {
   id: string;
   title: string;
   shelf: Shelf;
   books: Book[];
+  currentlyReading?: Book[];
 }) {
   const { t } = useLanguage();
+  const items = [
+    ...currentlyReading.map((book) => ({ book, tag: t.reading.currentlyReading })),
+    ...books.map((book) => ({ book, tag: undefined })),
+  ];
 
   return (
     <section id={id} className="mb-20">
-      <div className="flex items-baseline justify-between gap-4 mb-8 border-b border-border pb-4">
-        <h2 className="text-3xl font-bold text-foreground">
-          {title}
-          <span className="ml-3 text-lg font-medium text-foreground/60">{books.length}</span>
-        </h2>
-      </div>
-
-      {books.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
-          {books.map((book) => (
-            <BookCard key={book.url} book={book} byLabel={t.reading.by} />
-          ))}
-        </div>
-      ) : (
-        <p className="text-foreground/70 mb-10">{t.reading.empty}</p>
-      )}
-
-      <div className="text-center">
+      <div className="flex items-center justify-between gap-4 mb-8 border-b border-border pb-4">
+        <h2 className="text-3xl font-bold text-foreground">{title}</h2>
         <a
           href={shelfUrl(shelf)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md hover:bg-primary/90 transition-colors font-medium"
+          className="inline-flex shrink-0 items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors font-medium"
         >
           {t.reading.viewMore}
           <ExternalLink className="w-4 h-4" />
         </a>
       </div>
+
+      {items.length > 0 ? (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          {items.slice(0, SHELF_SIZE).map(({ book, tag }, index) => (
+            <BookCard
+              key={book.url}
+              book={book}
+              byLabel={t.reading.by}
+              tag={tag}
+              className={visibilityClass(index)}
+            />
+          ))}
+        </div>
+      ) : (
+        <p className="text-foreground/70">{t.reading.empty}</p>
+      )}
     </section>
   );
 }
@@ -62,6 +75,10 @@ export default function ReadingPage() {
   const read = useGoodreadsShelf(
     { shelf: "read", widgetId: "1790153628", numBooks: SHELF_SIZE, sort: "date_read" },
     fallbackRead,
+  );
+  const current = useGoodreadsShelf(
+    { shelf: "currently-reading", widgetId: "1790153907", numBooks: SHELF_SIZE, sort: "date_updated" },
+    [],
   );
   const toRead = useGoodreadsShelf(
     { shelf: "to-read", widgetId: "1790153906", numBooks: SHELF_SIZE, sort: "date_added" },
@@ -89,8 +106,8 @@ export default function ReadingPage() {
             </p>
           </div>
 
+          <ShelfSection id="to-read" title={t.reading.toRead} shelf="to-read" books={toRead} currentlyReading={current} />
           <ShelfSection id="read" title={t.reading.read} shelf="read" books={read} />
-          <ShelfSection id="to-read" title={t.reading.toRead} shelf="to-read" books={toRead} />
         </div>
       </div>
     </div>
