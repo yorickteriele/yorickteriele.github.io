@@ -35,13 +35,21 @@ export function BookCover({ book, className }: { book: Book; className: string }
   );
 }
 
-export default function BookCard({ book, byLabel }: { book: Book; byLabel: string }) {
+export default function BookCard({
+  book,
+  byLabel,
+  className = "",
+}: {
+  book: Book;
+  byLabel: string;
+  className?: string;
+}) {
   return (
     <a
       href={book.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+      className={`group flex flex-col bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300 ${className}`}
     >
       <div className="aspect-[2/3] overflow-hidden bg-muted">
         {book.cover ? (
