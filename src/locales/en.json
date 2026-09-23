@@ -52,6 +52,20 @@
     "directEmail": "yorick.teriele@outlook.com",
     "schedule": "Schedule a Meeting"
   },
+  "reading": {
+    "title": "Reading",
+    "description": "What I've been reading lately, straight from my Goodreads shelves.",
+    "latestUpdates": "Latest updates",
+    "currentlyReading": "Currently reading",
+    "finished": "Finished",
+    "wantToRead": "Want to read",
+    "by": "by",
+    "viewMore": "View more",
+    "read": "Read",
+    "toRead": "To read",
+    "empty": "No books on this shelf yet.",
+    "backHome": "Back to home"
+  },
   "footer": {
     "copyright": "All rights reserved"
   }
