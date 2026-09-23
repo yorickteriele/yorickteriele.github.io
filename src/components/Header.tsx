@@ -76,6 +76,12 @@ export default function Header() {
             >
               {t.header.contact}
             </button>
+            <button
+              onClick={() => scrollToSection("reading")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              {t.header.reading}
+            </button>
           </div>
           
           <div className="flex items-center space-x-4">
