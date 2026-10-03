@@ -36,15 +36,15 @@
     "featured": true
   },
   {
-    "title": "ReadAloud",
+    "title": "ManyVoiced",
     "description": {
       "en": "A Progressive Web App (PWA) designed to convert uploaded text into high-quality audio using AI-powered Text-to-Speech (TTS) services. Features include book/chapter management and a customized audio player.",
       "nl": "Een Progressive Web App (PWA) ontworpen om geüploade tekst om te zetten in hoogwaardige audio via AI-gestuurde Text-to-Speech (TTS) diensten. Bevat boek- en hoofdstukbeheer en een aangepaste audiospeler."
     },
     "image": "/ReadAloud.png",
     "technologies": ["ASP.NET Core", "React", "Redis", "PWA", "PostgreSQL"],
-    "github": "https://github.com/yorickteriele/ReadAloud",
-    "demo": "https://readaloud.yorickteriele.nl",
+    "github": "",
+    "demo": "https://manyvoiced.com",
     "featured": true
   },
   {
