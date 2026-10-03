@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useLanguage } from "../contexts/LanguageContext";
+import { GOODREADS_PROFILE_URL } from "../lib/goodreads";
+import { STRAVA_PROFILE_URL } from "../lib/strava";
 
 const envPhone = process.env.NEXT_PUBLIC_PHONE;
 
@@ -241,6 +243,14 @@ export default function CVPrint() {
       <section className="cv-section">
         <h2>{l.hobbies}</h2>
         <p>{l.hobbiesText}</p>
+        <p>
+          <strong>Goodreads:</strong>{" "}
+          <a href={GOODREADS_PROFILE_URL}>www.goodreads.com/user/show/192543272</a>
+        </p>
+        <p>
+          <strong>Strava:</strong>{" "}
+          <a href={STRAVA_PROFILE_URL}>www.strava.com/athletes/yorickteriele</a>
+        </p>
       </section>
     </article>
   );
