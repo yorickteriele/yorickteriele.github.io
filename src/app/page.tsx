@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
-import Hobbies from "@/components/Hobbies";
 import Contact from "@/components/Contact";
 import Reading from "@/components/Reading";
 import CVPrint from "@/components/CVPrint";
@@ -21,7 +20,6 @@ export default function Home() {
           <Projects />
           <Contact />
           <Reading />
-          <Hobbies />
         </main>
         <Footer />
       </div>

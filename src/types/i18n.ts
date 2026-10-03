@@ -90,13 +90,6 @@ export interface FooterTranslations {
   copyright: string;
 }
 
-// Hobbies translations
-export interface HobbiesTranslations {
-  title: string;
-  description: string;
-  cta: string;
-}
-
 // Complete translations structure
 export interface Translations {
   common: CommonTranslations;
@@ -108,7 +101,6 @@ export interface Translations {
   contact: ContactTranslations;
   reading: ReadingTranslations;
   footer: FooterTranslations;
-  hobbies: HobbiesTranslations;
 }
 
 // Experience item with localized fields
