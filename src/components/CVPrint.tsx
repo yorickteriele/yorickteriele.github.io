@@ -175,7 +175,7 @@ export default function CVPrint() {
               </dd>
             </div>
           </dl>
-          <Image src="/Foto 1.png" alt="" width={320} height={472} priority />
+          <Image src="/Foto 1.jpg" alt="" width={320} height={472} priority />
         </div>
       </section>
 

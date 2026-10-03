@@ -69,5 +69,10 @@
   },
   "footer": {
     "copyright": "All rights reserved"
+  },
+  "hobbies": {
+    "title": "Some hobby stuff 🙂",
+    "description": "When I'm not coding, I'm usually reading — here's what I've got going on Goodreads.",
+    "cta": "Take a look"
   }
 }

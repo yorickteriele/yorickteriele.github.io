@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "../contexts/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -9,6 +10,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const { t } = useLanguage();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -25,6 +28,7 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (!isHome) return;
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -32,6 +36,9 @@ export default function Header() {
       window.location.href = `/#${sectionId}`;
     }
   };
+
+  const navLinkClass =
+    "text-foreground hover:text-primary transition-colors";
 
   return (
     <header
@@ -52,36 +59,49 @@ export default function Header() {
             Yorick te Riele
           </Link>          
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              {t.header.about}
-            </button>
-            <button
-              onClick={() => scrollToSection("experience")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              {t.header.experience}
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              {t.header.projects}
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              {t.header.contact}
-            </button>
-            <button
-              onClick={() => scrollToSection("reading")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              {t.header.reading}
-            </button>
+            {isHome ? (
+              <>
+                <button onClick={() => scrollToSection("about")} className={navLinkClass}>
+                  {t.header.about}
+                </button>
+                <button onClick={() => scrollToSection("experience")} className={navLinkClass}>
+                  {t.header.experience}
+                </button>
+                <button onClick={() => scrollToSection("projects")} className={navLinkClass}>
+                  {t.header.projects}
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/#about" className={navLinkClass}>
+                  {t.header.about}
+                </Link>
+                <Link href="/#experience" className={navLinkClass}>
+                  {t.header.experience}
+                </Link>
+                <Link href="/#projects" className={navLinkClass}>
+                  {t.header.projects}
+                </Link>
+              </>
+            )}
+            {isHome ? (
+              <button onClick={() => scrollToSection("contact")} className={navLinkClass}>
+                {t.header.contact}
+              </button>
+            ) : (
+              <Link href="/#contact" className={navLinkClass}>
+                {t.header.contact}
+              </Link>
+            )}
+            {isHome ? (
+              <button onClick={() => scrollToSection("reading")} className={navLinkClass}>
+                {t.header.reading}
+              </button>
+            ) : (
+              <Link href="/#reading" className={navLinkClass}>
+                {t.header.reading}
+              </Link>
+            )}
           </div>
           
           <div className="flex items-center space-x-4">
