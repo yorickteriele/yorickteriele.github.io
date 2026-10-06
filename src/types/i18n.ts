@@ -5,7 +5,6 @@ export type Locale = 'en' | 'nl';
 export interface CommonTranslations {
   code: string;
   name: string;
-  flag: string;
 }
 
 // Header translations

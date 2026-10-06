@@ -40,11 +40,8 @@ export default function Experience() {
     return (
       <div
         key={key}
-        className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-500"
+        className="relative bg-card border border-border rounded-xl overflow-hidden"
       >
-        {/* Gradient overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
         <div className="relative p-6">
           {/* Header section */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-3">
@@ -61,7 +58,7 @@ export default function Experience() {
                 </div>
               )}
               <div className="min-w-0 flex-1">
-                <h4 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                <h4 className="text-2xl font-bold text-foreground mb-2">
                   {exp.title}
                 </h4>
                 <p className="text-lg text-primary font-semibold flex items-center gap-2">
@@ -70,7 +67,7 @@ export default function Experience() {
                 </p>
               </div>
             </div>
-            <span className="inline-flex items-center text-muted-foreground bg-secondary/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium border border-border/50">
+            <span className="inline-flex items-center text-foreground bg-secondary/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium border border-border/50">
               {exp.period}
             </span>
           </div>
@@ -83,13 +80,10 @@ export default function Experience() {
           {/* Technologies */}
           {exp.technologies?.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-5">
-              {exp.technologies.map((tech: string, techIndex: number) => (
+              {exp.technologies.map((tech: string) => (
                 <span
                   key={tech}
-                  className="bg-accent/20 text-accent px-3 py-1.5 rounded-lg text-sm font-medium border border-accent/30 hover:bg-accent/30 hover:scale-105 transition-all duration-300"
-                  style={{
-                    animationDelay: `${techIndex * 50}ms`,
-                  }}
+                  className="bg-background/60 text-foreground px-3 py-1.5 rounded-lg text-sm font-medium border border-border"
                 >
                   {tech}
                 </span>
@@ -156,9 +150,6 @@ export default function Experience() {
             </div>
           )}
         </div>
-
-        {/* Decorative corner accent */}
-        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
     );
   };

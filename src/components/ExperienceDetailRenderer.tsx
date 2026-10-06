@@ -29,7 +29,7 @@ function InternshipDetail({ content }: InternshipDetailProps) {
       {content.highlights && content.highlights.length > 0 && (
         <div>
           {content.highlightsLabel && (
-            <p className="text-foreground-light dark:text-foreground font-medium mb-2">
+            <p className="text-foreground font-medium mb-2">
               {content.highlightsLabel}
             </p>
           )}
@@ -56,35 +56,35 @@ interface WindesheimBachelorProps {
 
 function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
   return (
-    <section className="max-w-5xl mx-auto p-6 bg-background-light dark:bg-background border border-border-light dark:border-border rounded-xl shadow-lg">
+    <section className="max-w-5xl mx-auto p-6 bg-background border border-border rounded-xl shadow-lg">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-8 border-b border-border-light dark:border-border pb-4 gap-4">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-8 border-b border-border pb-4 gap-4">
         <div className="flex items-center gap-3">
           <div className="bg-primary text-primary-foreground px-3 py-2 rounded-md font-semibold text-sm">
             Windesheim
           </div>
-          <h3 className="text-2xl font-light text-foreground-light dark:text-foreground">
+          <h3 className="text-2xl font-light text-foreground">
             Bachelor of ICT - Software Engineering
           </h3>
         </div>
       </div>
 
       {/* Bachelor Description */}
-      <p className="mb-8 text-foreground-light dark:text-foreground leading-relaxed">
+      <p className="mb-8 text-foreground leading-relaxed">
         {content.description}
       </p>
 
-      <p className="mb-8 text-foreground-light dark:text-foreground leading-relaxed">
+      <p className="mb-8 text-foreground leading-relaxed">
         {content.semestersLabel}
       </p>
 
       {/* Semester Labels */}
       <div className="hidden sm:grid grid-cols-3 gap-4 mb-4">
         <div></div>
-        <div className="text-center text-muted-foreground-light dark:text-muted-foreground font-medium text-base">
+        <div className="text-center text-foreground/80 font-medium text-base">
           Semester 1
         </div>
-        <div className="text-center text-muted-foreground-light dark:text-muted-foreground font-medium text-base">
+        <div className="text-center text-foreground/80 font-medium text-base">
           Semester 2
         </div>
       </div>
@@ -92,7 +92,7 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
       {/* Study Years / Semester Tiles */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center text-card-foreground">
         {/* Year 1 */}
-        <div className="flex items-center justify-center font-semibold text-foreground-light dark:text-foreground bg-card-light dark:bg-card border dark:border-border rounded-md p-4">
+        <div className="flex items-center justify-center font-semibold text-foreground bg-card border border-border rounded-md p-4">
           {content.year} 1
         </div>
         <div className="h-28 sm:h-32 rounded-xl bg-sky-500 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
@@ -103,7 +103,7 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
         </div>
 
         {/* Year 2 */}
-        <div className="flex items-center justify-center font-semibold text-foreground-light dark:text-foreground bg-card-light dark:bg-card border dark:border-border rounded-md p-4">
+        <div className="flex items-center justify-center font-semibold text-foreground bg-card border border-border rounded-md p-4">
           {content.year} 2
         </div>
         <div className="h-28 sm:h-32 rounded-xl bg-blue-900 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
@@ -114,7 +114,7 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
         </div>
 
         {/* Year 3 */}
-        <div className="flex items-center justify-center font-semibold text-foreground-light dark:text-foreground bg-card-light dark:bg-card border dark:border-border rounded-md p-4">
+        <div className="flex items-center justify-center font-semibold text-foreground bg-card border border-border rounded-md p-4">
           {content.year} 3
         </div>
         <div className="h-28 sm:h-32 rounded-xl bg-pink-500 text-card-foreground font-medium flex flex-col items-center justify-center shadow">
@@ -125,7 +125,7 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
         </div>
 
         {/* Year 4 */}
-        <div className="flex items-center justify-center font-semibold text-foreground-light dark:text-foreground bg-card-light dark:bg-card border dark:border-border rounded-md p-4">
+        <div className="flex items-center justify-center font-semibold text-foreground bg-card border border-border rounded-md p-4">
           {content.year} 4
         </div>
         <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow animate-pulse-slow">
