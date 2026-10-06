@@ -24,7 +24,7 @@ export default function Projects() {
             {featuredProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-500 group flex flex-col"
+                className="bg-card border border-border rounded-lg overflow-hidden flex flex-col"
               >
                 <div className="relative overflow-hidden h-48 flex-shrink-0">
                   <img 
@@ -49,7 +49,7 @@ export default function Projects() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium"
+                        className="bg-background/60 text-foreground border border-border px-3 py-1 rounded-full text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -95,7 +95,7 @@ export default function Projects() {
                 {otherProjects.map((project, index) => (
                   <div
                     key={index}
-                    className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300 flex flex-col"
+                    className="bg-card border border-border rounded-lg p-6 flex flex-col"
                   >
                     <h4 className="text-lg font-semibold text-foreground mb-3">
                       {project.title}
@@ -107,7 +107,7 @@ export default function Projects() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="bg-accent/20 text-accent px-2 py-1 rounded text-xs font-medium"
+                          className="bg-background/60 text-foreground border border-border px-2 py-1 rounded text-xs font-medium"
                         >
                           {tech}
                         </span>

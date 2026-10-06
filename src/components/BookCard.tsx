@@ -51,7 +51,7 @@ export default function BookCard({
       href={book.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group flex flex-col bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300 ${className}`}
+      className={`group flex flex-col bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors ${className}`}
     >
       <div className="relative aspect-[2/3] overflow-hidden bg-muted">
         {tag && (
@@ -64,7 +64,7 @@ export default function BookCard({
             src={book.cover}
             alt={book.title}
             loading="lazy"
-            className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="h-full w-full object-cover"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-muted-foreground">

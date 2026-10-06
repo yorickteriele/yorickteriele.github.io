@@ -12,6 +12,18 @@
     "featured": true
   },
   {
+    "title": "ManyVoiced",
+    "description": {
+      "en": "A Progressive Web App (PWA) designed to convert uploaded text into high-quality audio using AI-powered Text-to-Speech (TTS) services. Features include book/chapter management and a customized audio player.",
+      "nl": "Een Progressive Web App (PWA) ontworpen om geüploade tekst om te zetten in hoogwaardige audio via AI-gestuurde Text-to-Speech (TTS) diensten. Bevat boek- en hoofdstukbeheer en een aangepaste audiospeler."
+    },
+    "image": "/ReadAloud.png",
+    "technologies": ["ASP.NET Core", "React", "Redis", "PWA", "PostgreSQL"],
+    "github": "",
+    "demo": "https://manyvoiced.com",
+    "featured": true
+  },
+  {
     "title": "Superelf Football Pool",
     "description": {
       "en": "A web application where users can create pools, invite friends, and compete by selecting 15 unique Eredivisie clubs to score points based on player performances. Features include user authentication, real-time score updates, and a responsive interface.",
@@ -33,18 +45,6 @@
     "technologies": ["Python", "AI/ML", "PostgreSQL", "Alpaca API", "Async Processing"],
     "github": "https://github.com/yorickteriele/TradingBot",
     "demo": "https://trading.yorickteriele.nl/",
-    "featured": true
-  },
-  {
-    "title": "ManyVoiced",
-    "description": {
-      "en": "A Progressive Web App (PWA) designed to convert uploaded text into high-quality audio using AI-powered Text-to-Speech (TTS) services. Features include book/chapter management and a customized audio player.",
-      "nl": "Een Progressive Web App (PWA) ontworpen om geüploade tekst om te zetten in hoogwaardige audio via AI-gestuurde Text-to-Speech (TTS) diensten. Bevat boek- en hoofdstukbeheer en een aangepaste audiospeler."
-    },
-    "image": "/ReadAloud.png",
-    "technologies": ["ASP.NET Core", "React", "Redis", "PWA", "PostgreSQL"],
-    "github": "",
-    "demo": "https://manyvoiced.com",
     "featured": true
   },
   {

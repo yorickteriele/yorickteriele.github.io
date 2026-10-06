@@ -60,7 +60,7 @@ export default function Reading() {
                 href={book.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex gap-4 bg-card border border-border rounded-lg p-5 hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+                className="group flex gap-4 bg-card border border-border rounded-lg p-5 hover:border-primary/50 transition-colors"
               >
                 <BookCover book={book} className="w-16 h-24" />
                 <div className="flex flex-col min-w-0">

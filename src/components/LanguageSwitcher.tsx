@@ -15,8 +15,7 @@ export default function LanguageSwitcher() {
     const translations = getTranslations(loc);
     return {
       code: loc,
-      name: translations.common.name,
-      flag: translations.common.flag
+      name: translations.common.name
     };
   });
 
@@ -46,8 +45,7 @@ export default function LanguageSwitcher() {
         className="flex items-center space-x-2 px-3 py-2 rounded-md text-foreground hover:text-primary hover:bg-background/50 transition-colors"
         aria-label="Change language"
       >
-        <span className="text-lg">{currentLang?.flag}</span>
-        <span className="hidden sm:inline-block text-sm font-medium">{currentLang?.name}</span>
+        <span className="text-sm font-medium">{currentLang?.name}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -73,7 +71,6 @@ export default function LanguageSwitcher() {
                   : 'text-foreground'
               }`}
             >
-              <span className="text-lg">{lang.flag}</span>
               <span className="text-sm font-medium">{lang.name}</span>
               {locale === lang.code && (
                 <svg

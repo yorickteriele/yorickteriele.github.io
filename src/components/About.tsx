@@ -41,7 +41,7 @@ export default function About() {
                 {skills.map((skill, index) => (
                   <div
                     key={skill}
-                    className="bg-card border border-border rounded-lg p-3 text-center hover:bg-accent/10 transition-colors"
+                    className="bg-card border border-border rounded-lg p-3 text-center"
                     style={{
                       animationDelay: `${index * 100}ms`,
                     }}

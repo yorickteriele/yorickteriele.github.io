@@ -1,8 +1,7 @@
 {
   "common": {
     "code": "en",
-    "name": "English",
-    "flag": "🇺🇸"
+    "name": "English"
   },
   "header": {
     "about": "About Me",
