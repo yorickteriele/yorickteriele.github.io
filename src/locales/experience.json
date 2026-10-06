@@ -155,7 +155,7 @@
           "Additionally, I wrote unit and frontend tests using Playwright and collaborated on creating a shared library to ensure the editor functions consistently across all microservices. This internship truly provided me with invaluable hands-on experience with Azure, modern workflows, and the essence of teamwork. Some of these piplines architecture I still use for other projects.",
           "Looking back, I learned a lot and it was a genuinely fun and rewarding project."
         ],
-        "image": "/htmldiff.png",
+        "image": "/htmldiff.webp",
         "imageAlt": "HTML diff preview"
       },
       "nl": {
@@ -165,7 +165,7 @@
           "Daarnaast schreef ik unit- en front-endtests met onder andere Playwright en Nunit en werkte ik mee aan een common library zodat de editor consistent bleef in alle microservices. Deze stage gaf me waardevolle praktijkervaring met Azure, moderne werkprocessen en teamwork. Een deel van de pipeline-architectuur gebruik ik nog steeds in andere projecten.",
           "Terugkijkend heb ik ontzettend veel geleerd en vond ik het een leuke en waardevolle stage."
         ],
-        "image": "/htmldiff.png",
+        "image": "/htmldiff.webp",
         "imageAlt": "HTML diff voorbeeld"
       }
     }
@@ -192,14 +192,20 @@
         "semestersLabel": "These are my semesters:",
         "year": "Year",
         "currentLabel": "Current",
-        "upcomingLabel": "Upcoming"
+        "upcomingLabel": "Upcoming",
+        "semester": "Semester",
+        "internship": "Internship (Level 3)",
+        "graduation": "Graduation: SE"
       },
       "nl": {
         "description": "Tijdens mijn HBO-ICT Software Engineering opleiding aan Windesheim werk ik elk semester aan een project van minimaal 10 weken in een projectgroep. Dit heeft me waardevolle ervaring opgeleverd met Scrum, samenwerken in een team en communicatie met stakeholders. De opleiding legt veel nadruk op functioneel en technisch ontwerp voor implementatie, waardoor ik mijn planning, analyse en probleemoplossend vermogen heb verbeterd. Ik werk voornamelijk met C#, met enige ervaring in Java, PHP en Python. Hoewel ik nog studeer, biedt de structuur en variatie van semesterprojecten een sterke basis in softwareontwikkeling en samenwerking.",
         "semestersLabel": "Deze semesters heb ik gevolgd:",
         "year": "Jaar",
         "currentLabel": "Huidig",
-        "upcomingLabel": "Komend"
+        "upcomingLabel": "Komend",
+        "semester": "Semester",
+        "internship": "Stage (niveau 3)",
+        "graduation": "Afstuderen: SE"
       }
     }
   },

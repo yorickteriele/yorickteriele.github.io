@@ -5,7 +5,7 @@
       "en": "A comprehensive multi-tenant planning software platform featuring a complex backend architecture with .NET and a modern React frontend. Includes modules for user management, role-based access control, and organization-specific planning workflows.",
       "nl": "Een uitgebreid multi-tenant planningssoftwareplatform met een complexe backend-architectuur in .NET en een moderne React-frontend. Bevat modules voor gebruikersbeheer, rolgebaseerde toegangscontrole en organisatie-specifieke planningsworkflows."
     },
-    "image": "/Aresis.png",
+    "image": "/Aresis.webp",
     "technologies": ["C#", ".NET", "React", "TypeScript", "PostgreSQL", "Docker", "Multi-tenancy"],
     "github": "",
     "demo": "https://www.aresis.nl",
@@ -17,7 +17,7 @@
       "en": "A Progressive Web App (PWA) designed to convert uploaded text into high-quality audio using AI-powered Text-to-Speech (TTS) services. Features include book/chapter management and a customized audio player.",
       "nl": "Een Progressive Web App (PWA) ontworpen om geüploade tekst om te zetten in hoogwaardige audio via AI-gestuurde Text-to-Speech (TTS) diensten. Bevat boek- en hoofdstukbeheer en een aangepaste audiospeler."
     },
-    "image": "/ReadAloud.png",
+    "image": "/ReadAloud.webp",
     "technologies": ["ASP.NET Core", "React", "Redis", "PWA", "PostgreSQL"],
     "github": "",
     "demo": "https://manyvoiced.com",
@@ -29,7 +29,7 @@
       "en": "A web application where users can create pools, invite friends, and compete by selecting 15 unique Eredivisie clubs to score points based on player performances. Features include user authentication, real-time score updates, and a responsive interface.",
       "nl": "Een webapplicatie waarbij gebruikers pools kunnen aanmaken, vrienden uitnodigen en punten scoren door 15 unieke Eredivisieclubs te selecteren. Inclusief gebruikersauthenticatie, real-time score updates en responsive design."
     },
-    "image": "/Superelf.png",
+    "image": "/Superelf.webp",
     "technologies": ["C#", ".NET", "Node.js", "PostgreSQL", "GitHub Actions"],
     "github": "https://github.com/yorickteriele/Superelf",
     "demo": "https://superelf.yorickteriele.nl",
@@ -41,7 +41,7 @@
       "en": "An automated trading bot that analyzes news articles from multiple financial sources and makes stock trading decisions based on sentiment analysis using AI/ML models. Features include news sentiment analysis with FinBERT, automated trading via Alpaca API, risk management, and performance tracking.",
       "nl": "Een automatische trading bot die nieuwsartikelen analyseert en aandelenbeslissingen maakt op basis van sentimentanalyse via AI/ML-modellen. Inclusief FinBERT-analyse, Alpaca API, risicomanagement en performance tracking."
     },
-    "image": "/TradingBot.png",
+    "image": "/TradingBot.webp",
     "technologies": ["Python", "AI/ML", "PostgreSQL", "Alpaca API", "Async Processing"],
     "github": "https://github.com/yorickteriele/TradingBot",
     "demo": "https://trading.yorickteriele.nl/",
@@ -77,7 +77,7 @@
       "en": "A Unity project featuring procedurally generated caves using Voronoi noise and cellular automata. This project explores procedural generation techniques to create unique and interesting cave systems with smooth transitions between different terrain types.",
       "nl": "Een Unity-project met procedurally gegenereerde grotten via Voronoi noise en cellular automata. Het onderzoekt technieken voor unieke en interessante grotten met vloeiende overgangen tussen terreintypes."
     },
-    "image": "/CaveRooms.png",
+    "image": "/CaveRooms.webp",
     "technologies": ["Unity", "C#", "Procedural Generation", "Voronoi Diagrams", "Perlin Noise", "Cellular Automata"],
     "github": "https://github.com/yorickteriele/CaveGame",
     "demo": "https://cavegame.yorickteriele.nl",
@@ -89,7 +89,7 @@
       "en": "A fully automated, version-controlled Linux environment setup. Uses shell scripts and Git submodules to manage system configuration, desktop applications, and development tools, ensuring a consistent and reproducible workflow across machines.",
       "nl": "Een volledig geautomatiseerde en versiebeheerde Linux-omgeving. Gebruikt shell-scripts en Git-submodules om systeemconfiguratie, desktopapplicaties en development tools te beheren voor een consistente workflow op elk systeem."
     },
-    "image": "/window.svg",
+    "image": "",
     "technologies": ["Bash", "Shell", "Linux", "Git Submodules", "Automation"],
     "github": "https://github.com/yorickteriele/omarchy-supplement",
     "demo": "",
@@ -101,7 +101,7 @@
       "en": "A highly modular and organized Neovim distribution based on LazyVim. Features a custom folder structure and pre-configured support for over 40 languages, LSP, Treesitter, and debugging tools.",
       "nl": "Een modulaire en strak georganiseerde Neovim-distributie gebaseerd op LazyVim. Bevat een aangepaste mappenstructuur en geconfigureerde ondersteuning voor meer dan 40 talen, LSP, Treesitter en debugging-tools."
     },
-    "image": "/file.svg",
+    "image": "",
     "technologies": ["Lua", "Neovim", "LSP", "Treesitter", "LazyVim"],
     "github": "https://github.com/yorickteriele/YorVim",
     "demo": "",

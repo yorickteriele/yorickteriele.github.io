@@ -36,7 +36,9 @@
     "readMore": "Read more"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "otherProjects": "Other Projects",
+    "liveDemo": "Live Demo"
   },
   "contact": {
     "title": "Let's Connect",

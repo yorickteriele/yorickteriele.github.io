@@ -62,7 +62,7 @@ export default function Experience() {
                   {exp.title}
                 </h4>
                 <p className="text-lg text-primary font-semibold flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                  <span className="w-2 h-2 bg-primary rounded-full" />
                   {exp.company}
                 </p>
               </div>

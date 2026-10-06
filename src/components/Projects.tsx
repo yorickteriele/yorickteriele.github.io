@@ -65,7 +65,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="bg-primary text-primary-foreground px-4 py-2.5 rounded-md hover:bg-primary/90 transition-colors flex-1 text-center font-medium"
                       >
-                        Live Demo
+                        {t.projects.liveDemo}
                       </Link>
                     )}
                     {project.github !== "" && (
@@ -89,7 +89,7 @@ export default function Projects() {
           {otherProjects.length > 0 && (
             <>
               <h3 className="text-2xl font-semibold text-center mb-12 text-foreground">
-                Other Projects
+                {t.projects.otherProjects}
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {otherProjects.map((project, index) => (
@@ -121,7 +121,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
                         >
-                          Live Demo →
+                          {t.projects.liveDemo} →
                         </Link>
                       )}
                       {project.github !== "" && (

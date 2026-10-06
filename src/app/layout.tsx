@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className="dark">
+    <html lang="en" className="dark">
       <head>
         <link rel="canonical" href={siteConfig.url} />
       </head>

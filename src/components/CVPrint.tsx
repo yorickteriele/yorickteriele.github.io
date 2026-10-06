@@ -177,7 +177,7 @@ export default function CVPrint() {
               </dd>
             </div>
           </dl>
-          <Image src="/Foto 1.jpg" alt="" width={320} height={472} priority />
+          <Image src="/cv-photo.jpg" alt="" width={320} height={472} priority />
         </div>
       </section>
 
