@@ -97,7 +97,9 @@ export function useGoodreadsShelf(options: ShelfOptions, fallback: Book[]) {
     document.body.appendChild(container);
 
     const script = document.createElement("script");
-    script.src = src;
+    // Goodreads caches widget responses per URL; vary it hourly so a
+    // shelf never stays stuck on a stale copy.
+    script.src = `${src}&_=${Math.floor(Date.now() / 3_600_000)}`;
     script.async = true;
     script.onload = () => {
       if (markup !== null) {
