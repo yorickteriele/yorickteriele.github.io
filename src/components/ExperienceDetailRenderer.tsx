@@ -11,7 +11,7 @@ interface InternshipDetailProps {
 function InternshipDetail({ content }: InternshipDetailProps) {
   return (
     <div className="space-y-4">
-      <p className="text-foreground/80 leading-relaxed">{content.paragraphs[0]}</p>
+      <p className="text-foreground/90 leading-relaxed">{content.paragraphs[0]}</p>
       {content.image && (
         <div className="mt-2">
           <img
@@ -23,7 +23,7 @@ function InternshipDetail({ content }: InternshipDetailProps) {
         </div>
       )}
       {content.paragraphs.slice(1).map((paragraph, idx) => (
-        <p key={idx} className="text-foreground/80 leading-relaxed">
+        <p key={idx} className="text-foreground/90 leading-relaxed">
           {paragraph}
         </p>
       ))}
@@ -34,7 +34,7 @@ function InternshipDetail({ content }: InternshipDetailProps) {
               {content.highlightsLabel}
             </p>
           )}
-          <ul className="list-disc list-inside space-y-1 text-foreground/80 leading-relaxed">
+          <ul className="list-disc list-inside space-y-1 text-foreground/90 leading-relaxed">
             {content.highlights.map((highlight, idx) => (
               <li key={idx}>{highlight}</li>
             ))}
@@ -64,7 +64,7 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-8 border-b border-border pb-4 gap-4">
         <div className="flex items-center gap-3">
-          <div className="bg-primary text-primary-foreground px-3 py-2 rounded-md font-semibold text-sm">
+          <div className="bg-primary-strong text-primary-foreground px-3 py-2 rounded-md font-semibold text-sm">
             Windesheim
           </div>
           <h3 className="text-2xl font-light text-foreground">
@@ -85,10 +85,10 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
       {/* Semester Labels */}
       <div className="hidden sm:grid grid-cols-3 gap-4 mb-4">
         <div></div>
-        <div className="text-center text-foreground/80 font-medium text-base">
+        <div className="text-center text-foreground/90 font-medium text-base">
           {content.semester} 1
         </div>
-        <div className="text-center text-foreground/80 font-medium text-base">
+        <div className="text-center text-foreground/90 font-medium text-base">
           {content.semester} 2
         </div>
       </div>
@@ -166,7 +166,7 @@ export default function ExperienceDetailRenderer({ detailType, content }: Experi
     default:
       // Fallback for simple text content
       return (
-        <div className="text-foreground/80 leading-relaxed">
+        <div className="text-foreground/90 leading-relaxed">
           {typeof content === 'string' ? content : JSON.stringify(content)}
         </div>
       );

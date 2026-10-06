@@ -1,6 +1,7 @@
 "use client";
 import { Printer } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { loadCvPhoto, printCv } from "../lib/printCv";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -21,13 +22,13 @@ export default function Hero() {
               {t.hero.title}
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">{t.hero.subtitle}</h2>
-            <p className="text-base md:text-lg text-foreground/80 mb-8 leading-relaxed">{t.hero.description}</p>
+            <p className="text-base md:text-lg text-foreground/90 mb-8 leading-relaxed">{t.hero.description}</p>
             <div className="flex items-center space-x-6">
               <a
                 href="https://github.com/yorickteriele"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/90 hover:text-primary transition-colors"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -38,7 +39,7 @@ export default function Hero() {
                 href="https://linkedin.com/in/yorickteriele"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/90 hover:text-primary transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +51,7 @@ export default function Hero() {
                 href="https://www.strava.com/athletes/yorickteriele"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/90 hover:text-primary transition-colors"
                 aria-label="Strava"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -59,7 +60,7 @@ export default function Hero() {
               </a>
               <a
                 href="mailto:yorick.teriele@outlook.com"
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/90 hover:text-primary transition-colors"
                 aria-label="Email"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +90,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
           <button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            className="w-full sm:w-auto bg-primary-strong text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary-strong/90 transition-colors"
           >
             {t.projects.title}
           </button>
@@ -100,7 +101,9 @@ export default function Hero() {
             {t.hero.cta}
           </button>
           <button
-            onClick={() => window.print()}
+            onClick={printCv}
+            onPointerEnter={loadCvPhoto}
+            onFocus={loadCvPhoto}
             className="w-full sm:w-auto border border-border text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/50 transition-colors inline-flex items-center justify-center gap-2"
           >
             <Printer className="h-5 w-5" aria-hidden="true" />

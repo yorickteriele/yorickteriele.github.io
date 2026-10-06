@@ -14,7 +14,7 @@ export default function Contact() {
           </h2>
           
           <div className="mb-12">
-            <p className="text-xl text-foreground/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 leading-relaxed max-w-2xl mx-auto">
               {t.contact.description}
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function Contact() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">{t.contact.email}</h3>
-              <p className="text-foreground/80 mb-2">{t.contact.emailDescription}</p>
+              <p className="text-foreground/90 mb-2">{t.contact.emailDescription}</p>
               <p className="text-primary font-medium">yorick.teriele@outlook.com</p>
             </a>
             
@@ -47,7 +47,7 @@ export default function Contact() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">{t.contact.linkedin}</h3>
-              <p className="text-foreground/80 mb-2">{t.contact.linkedinDescription}</p>
+              <p className="text-foreground/90 mb-2">{t.contact.linkedinDescription}</p>
               <p className="text-primary font-medium">@yorickteriele</p>
             </a>
             
@@ -63,7 +63,7 @@ export default function Contact() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">{t.contact.github}</h3>
-              <p className="text-foreground/80 mb-2">{t.contact.githubDescription}</p>
+              <p className="text-foreground/90 mb-2">{t.contact.githubDescription}</p>
               <p className="text-primary font-medium">@yorickteriele</p>
             </a>
           </div>

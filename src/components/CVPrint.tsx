@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { GOODREADS_PROFILE_URL } from "../lib/goodreads";
 import { STRAVA_PROFILE_URL } from "../lib/strava";
+import { loadCvPhoto } from "../lib/printCv";
 
 const envPhone = process.env.NEXT_PUBLIC_PHONE;
 
@@ -113,6 +114,12 @@ function CVExperienceRow({ item }: { item: CVExperienceItem }) {
 export default function CVPrint() {
   const { locale, t, experienceItems, projectItems } = useLanguage();
   const l = labels[locale];
+
+  // Ctrl+P / Cmd+P skips the print button, so start loading the photo then.
+  useEffect(() => {
+    window.addEventListener("beforeprint", loadCvPhoto);
+    return () => window.removeEventListener("beforeprint", loadCvPhoto);
+  }, []);
   const education = experienceItems.filter(
     (item) => item.category === "education",
   );
@@ -177,7 +184,9 @@ export default function CVPrint() {
               </dd>
             </div>
           </dl>
-          <Image src="/cv-photo.jpg" alt="" width={320} height={472} priority />
+          {/* src is set by loadCvPhoto right before printing */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img data-cv-photo alt="" width={600} height={800} />
         </div>
       </section>
 

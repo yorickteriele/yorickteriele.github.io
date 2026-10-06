@@ -44,7 +44,7 @@ function ShelfSection({
       <div className="flex items-center justify-between gap-4 mb-8 border-b border-border pb-4">
         <h2 className="text-3xl font-bold text-foreground">
           {title}
-          <span className="ml-3 text-lg font-medium text-foreground/60">
+          <span className="ml-3 text-lg font-medium text-foreground/80">
             {Math.max(total, items.length)}
           </span>
         </h2>
@@ -52,7 +52,7 @@ function ShelfSection({
           href={shelfUrl(shelf)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex shrink-0 items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors font-medium"
+          className="inline-flex shrink-0 items-center gap-2 bg-primary-strong text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary-strong/90 transition-colors font-medium"
         >
           {t.reading.viewMore}
           <ExternalLink className="w-4 h-4" />
@@ -72,7 +72,7 @@ function ShelfSection({
           ))}
         </div>
       ) : (
-        <p className="text-foreground/70">{t.reading.empty}</p>
+        <p className="text-foreground/90">{t.reading.empty}</p>
       )}
     </section>
   );
@@ -89,7 +89,7 @@ export default function ReadingPage() {
         <div className="max-w-6xl mx-auto">
           <Link
             href="/#reading"
-            className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-foreground/90 hover:text-primary transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             {t.reading.backHome}
@@ -99,7 +99,7 @@ export default function ReadingPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               {t.reading.title}
             </h1>
-            <p className="text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 leading-relaxed max-w-2xl mx-auto">
               {t.reading.description}
             </p>
           </div>

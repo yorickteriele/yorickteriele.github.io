@@ -43,8 +43,10 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 rounded-md text-foreground hover:text-primary hover:bg-background/50 transition-colors"
-        aria-label="Change language"
+        aria-haspopup="true"
+        aria-expanded={isOpen}
       >
+        <span className="sr-only">Change language: </span>
         <span className="text-sm font-medium">{currentLang?.name}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}

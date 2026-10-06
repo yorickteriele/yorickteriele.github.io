@@ -22,13 +22,13 @@ export default function About() {
               <h3 className="text-2xl font-semibold mb-6 text-foreground">
                 {t.about.greeting}
               </h3>
-              <p className="text-foreground/80 mb-6 leading-relaxed">
+              <p className="text-foreground/90 mb-6 leading-relaxed">
                 {t.about.paragraph1}
               </p>
-              <p className="text-foreground/80 mb-6 leading-relaxed">
+              <p className="text-foreground/90 mb-6 leading-relaxed">
                 {t.about.paragraph2}
               </p>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-foreground/90 leading-relaxed">
                 {t.about.paragraph3}
               </p>
             </div>

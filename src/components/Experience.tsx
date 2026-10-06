@@ -58,9 +58,9 @@ export default function Experience() {
                 </div>
               )}
               <div className="min-w-0 flex-1">
-                <h4 className="text-2xl font-bold text-foreground mb-2">
+                <h3 className="text-2xl font-bold text-foreground mb-2">
                   {exp.title}
-                </h4>
+                </h3>
                 <p className="text-lg text-primary font-semibold flex items-center gap-2">
                   <span className="w-2 h-2 bg-primary rounded-full" />
                   {exp.company}
@@ -73,7 +73,7 @@ export default function Experience() {
           </div>
 
           {/* Description */}
-          <p className="text-foreground/80 mb-5 leading-relaxed">
+          <p className="text-foreground/90 mb-5 leading-relaxed">
             {exp.description}
           </p>
 
@@ -186,7 +186,7 @@ export default function Experience() {
                   }}
                   className={`px-4 py-2 rounded-lg border text-sm font-semibold transition-colors ${
                     isActive
-                      ? "bg-primary text-primary-foreground border-primary"
+                      ? "bg-primary-strong text-primary-foreground border-primary-strong"
                       : "bg-card/70 text-foreground border-border hover:border-primary/50 hover:bg-secondary/60"
                   }`}
                 >

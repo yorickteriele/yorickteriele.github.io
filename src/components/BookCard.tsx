@@ -55,7 +55,7 @@ export default function BookCard({
     >
       <div className="relative aspect-[2/3] overflow-hidden bg-muted">
         {tag && (
-          <span className="absolute top-2 left-2 z-10 bg-primary text-primary-foreground px-2 py-0.5 rounded-full text-xs font-medium shadow">
+          <span className="absolute top-2 left-2 z-10 bg-primary-strong text-primary-foreground px-2 py-0.5 rounded-full text-xs font-medium shadow">
             {tag}
           </span>
         )}
@@ -76,7 +76,7 @@ export default function BookCard({
         <h3 className="font-semibold text-foreground leading-snug line-clamp-2 group-hover:text-primary transition-colors">
           {book.title}
         </h3>
-        <p className="text-sm text-foreground/70 mt-1 mb-3">
+        <p className="text-sm text-foreground/90 mt-1 mb-3">
           {byLabel} {book.author}
         </p>
         {book.rating > 0 && (

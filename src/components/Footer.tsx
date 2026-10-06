@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-foreground/80">
+            <p className="text-foreground/90">
               © {currentYear} Yorick te Riele. {t.footer.copyright}
             </p>
           </div>
@@ -21,7 +21,7 @@ export default function Footer() {
               href="https://github.com/yorickteriele"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/90 hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -33,7 +33,7 @@ export default function Footer() {
               href="https://linkedin.com/in/yorickteriele"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/90 hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default function Footer() {
               href="https://www.strava.com/athletes/yorickteriele"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/90 hover:text-primary transition-colors"
               aria-label="Strava"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function Footer() {
             </a>
             <a
               href="mailto:yorick.teriele@outlook.com"
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/90 hover:text-primary transition-colors"
               aria-label="Email"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

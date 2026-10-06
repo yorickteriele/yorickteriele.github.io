@@ -44,7 +44,7 @@ export default function Projects() {
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-foreground/80 mb-4 leading-relaxed">
+                  <p className="text-foreground/90 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4 mt-auto">
@@ -65,7 +65,7 @@ export default function Projects() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-primary text-primary-foreground px-4 py-2.5 rounded-md hover:bg-primary/90 transition-colors flex-1 text-center font-medium"
+                        className="bg-primary-strong text-primary-foreground px-4 py-2.5 rounded-md hover:bg-primary-strong/90 transition-colors flex-1 text-center font-medium"
                       >
                         {t.projects.liveDemo}
                       </Link>
@@ -102,7 +102,7 @@ export default function Projects() {
                     <h4 className="text-lg font-semibold text-foreground mb-3">
                       {project.title}
                     </h4>
-                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
+                    <p className="text-foreground/90 mb-4 text-sm leading-relaxed">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -131,7 +131,7 @@ export default function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-foreground/80 hover:text-foreground text-sm font-medium transition-colors"
+                          className="text-foreground/90 hover:text-foreground text-sm font-medium transition-colors"
                         >
                           GitHub →
                         </Link>
