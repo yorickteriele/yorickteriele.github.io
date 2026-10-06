@@ -50,6 +50,8 @@ export interface ExperienceTranslations {
 // Projects translations
 export interface ProjectsTranslations {
   title: string;
+  otherProjects: string;
+  liveDemo: string;
 }
 
 // Contact translations

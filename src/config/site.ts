@@ -20,7 +20,7 @@ export const siteConfig = {
     "JavaScript developer"
   ],
   
-  ogImage: "/og-image.svg", 
+  ogImage: "/og-image.png",
   twitterHandle: "@yorickteriele", 
   
   location: "Nederland",

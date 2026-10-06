@@ -42,6 +42,10 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     }
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   const setLocale = (newLocale: Locale) => {
     setCurrentLocale(newLocale);
     localStorage.setItem('portfolio-locale', newLocale);

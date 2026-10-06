@@ -36,7 +36,9 @@
     "readMore": "Meer tonen"
   },
   "projects": {
-    "title": "Projecten"
+    "title": "Projecten",
+    "otherProjects": "Andere projecten",
+    "liveDemo": "Live demo"
   },
   "contact": {
     "title": "Laten we Connecten",

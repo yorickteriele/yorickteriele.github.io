@@ -51,6 +51,9 @@ interface WindesheimBachelorProps {
     year: string;
     currentLabel: string;
     upcomingLabel: string;
+    semester: string;
+    internship: string;
+    graduation: string;
   };
 }
 
@@ -82,10 +85,10 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
       <div className="hidden sm:grid grid-cols-3 gap-4 mb-4">
         <div></div>
         <div className="text-center text-foreground/80 font-medium text-base">
-          Semester 1
+          {content.semester} 1
         </div>
         <div className="text-center text-foreground/80 font-medium text-base">
-          Semester 2
+          {content.semester} 2
         </div>
       </div>
 
@@ -121,15 +124,15 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
           Quality in Software Development
         </div>
         <div className="h-28 sm:h-32 rounded-xl bg-yellow-400 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
-          Internship (Level 3)
+          {content.internship}
         </div>
 
         {/* Year 4 */}
         <div className="flex items-center justify-center font-semibold text-foreground bg-card border border-border rounded-md p-4">
           {content.year} 4
         </div>
-        <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow animate-pulse-slow">
-          Graduation: SE
+        <div className="relative h-28 sm:h-32 rounded-xl bg-amber-300 text-foreground-light font-medium flex flex-col items-center justify-center shadow">
+          {content.graduation}
           <span className="absolute bottom-2 right-2 text-xs bg-white/30 dark:bg-white/20 text-black font-semibold px-2 py-0.5 rounded-full">
             {content.currentLabel}
           </span>
@@ -142,15 +145,6 @@ function WindesheimBachelorDetail({ content }: WindesheimBachelorProps) {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes pulseSlow {
-          0%, 100% { box-shadow: 0 0 12px rgba(255, 20, 147, 0.4); }
-          50% { box-shadow: 0 0 25px rgba(255, 20, 147, 0.7); }
-        }
-        .animate-pulse-slow {
-          animation: pulseSlow 2.5s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 }
