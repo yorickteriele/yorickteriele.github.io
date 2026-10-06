@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "../contexts/LanguageContext";
-import { useGoodreadsShelf, type Book } from "@/lib/goodreads";
-import { fallbackRead, fallbackToRead } from "@/data/goodreads-fallback";
+import { shelves, type Book } from "@/lib/goodreads";
 import { BookCover, Stars } from "./BookCard";
 
 type UpdateKind = "currentlyReading" | "finished" | "wantToRead";
@@ -13,18 +12,7 @@ const UPDATE_COUNT = 3;
 export default function Reading() {
   const { t } = useLanguage();
 
-  const current = useGoodreadsShelf(
-    { shelf: "currently-reading", widgetId: "1790153001", numBooks: UPDATE_COUNT, sort: "date_updated" },
-    [],
-  );
-  const read = useGoodreadsShelf(
-    { shelf: "read", widgetId: "1790153002", numBooks: UPDATE_COUNT, sort: "date_read" },
-    fallbackRead.slice(0, UPDATE_COUNT),
-  );
-  const toRead = useGoodreadsShelf(
-    { shelf: "to-read", widgetId: "1790153003", numBooks: 2, sort: "date_added" },
-    fallbackToRead.slice(0, 2),
-  );
+  const { currentlyReading: current, read, toRead } = shelves;
 
   // Currently reading first, then the latest finished book and newest
   // to-read addition, topped up with more recently finished books.

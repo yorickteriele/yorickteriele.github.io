@@ -29,7 +29,9 @@ export default function Projects() {
                 <div className="relative overflow-hidden h-48 flex-shrink-0">
                   <img 
                     src={project.image} 
-                    alt={`${project.title} screenshot`} 
+                    alt={`${project.title} screenshot`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;

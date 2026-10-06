@@ -3,16 +3,11 @@
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { shelfUrl, useGoodreadsShelf, type Book, type Shelf } from "@/lib/goodreads";
-import { fallbackRead, fallbackToRead } from "@/data/goodreads-fallback";
-import shelfCounts from "@/data/goodreads-counts.json";
+import { shelfUrl, shelves, type Book, type Shelf } from "@/lib/goodreads";
 import BookCard from "./BookCard";
 
 // Two rows at every breakpoint: 2, 3 and 5 columns.
 const SHELF_SIZE = 10;
-// Books loaded live per shelf. The full totals come from
-// goodreads-counts.json, refreshed on every deploy.
-const COUNT_LIMIT = 100;
 
 function visibilityClass(index: number) {
   if (index >= 6) return "hidden lg:flex";
@@ -86,18 +81,7 @@ function ShelfSection({
 export default function ReadingPage() {
   const { t } = useLanguage();
 
-  const read = useGoodreadsShelf(
-    { shelf: "read", widgetId: "1790153628", numBooks: COUNT_LIMIT, sort: "date_read" },
-    fallbackRead,
-  );
-  const current = useGoodreadsShelf(
-    { shelf: "currently-reading", widgetId: "1790153907", numBooks: SHELF_SIZE, sort: "date_updated" },
-    [],
-  );
-  const toRead = useGoodreadsShelf(
-    { shelf: "to-read", widgetId: "1790153906", numBooks: COUNT_LIMIT, sort: "date_added" },
-    fallbackToRead,
-  );
+  const { currentlyReading: current, read, toRead } = shelves;
 
   return (
     <div className="pt-32 pb-12">
@@ -120,8 +104,8 @@ export default function ReadingPage() {
             </p>
           </div>
 
-          <ShelfSection id="to-read" title={t.reading.toRead} shelf="to-read" books={toRead} total={shelfCounts.toRead} currentlyReading={current} />
-          <ShelfSection id="read" title={t.reading.read} shelf="read" books={read} total={shelfCounts.read} />
+          <ShelfSection id="to-read" title={t.reading.toRead} shelf="to-read" books={toRead} total={shelves.counts.toRead} currentlyReading={current} />
+          <ShelfSection id="read" title={t.reading.read} shelf="read" books={read} total={shelves.counts.read} />
         </div>
       </div>
     </div>

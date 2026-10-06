@@ -17,6 +17,7 @@ function InternshipDetail({ content }: InternshipDetailProps) {
           <img
             src={content.image}
             alt={content.imageAlt}
+            loading="lazy"
             className="rounded shadow-md w-full"
           />
         </div>

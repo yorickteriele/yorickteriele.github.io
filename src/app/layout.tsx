@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { generateMetadata, generateStructuredData } from "../utils/seo";
@@ -7,11 +7,6 @@ import { siteConfig } from "../config/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -39,7 +34,7 @@ export default function RootLayout({
         <link rel="canonical" href={siteConfig.url} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} antialiased bg-background text-foreground`}
       >
         <LanguageProvider>
               {children}

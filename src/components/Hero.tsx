@@ -1,15 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
 import { Printer } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false);
   const { t } = useLanguage();
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   return (
     <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-24 pb-16">
@@ -17,9 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 backdrop-blur-[2px]"></div>
 
       {/* Content */}
-      <div className={`container mx-auto px-6 z-10 transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}>
+      <div className="container mx-auto px-6 z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           
           {/* Left side - Text content */}
@@ -84,6 +76,9 @@ export default function Hero() {
               <img
                 src="/portrait.webp"
                 alt="Portrait of me"
+                width={800}
+                height={769}
+                fetchPriority="high"
                 className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl"
               />
             </div>

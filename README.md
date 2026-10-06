@@ -20,7 +20,7 @@ npm run build   # static export to ./out
 
 ## Reading
 
-The Reading section loads Goodreads shelves live in the browser. Shelf totals come from `src/data/goodreads-counts.json`, which `scripts/goodreads-counts.mjs` refreshes on every deploy.
+The Reading section is built from `src/data/goodreads.json`, which `scripts/goodreads.mjs` refreshes from the Goodreads RSS feeds on every deploy, including the nightly one. Run `node scripts/goodreads.mjs` to refresh it locally.
 
 ## Deployment
 

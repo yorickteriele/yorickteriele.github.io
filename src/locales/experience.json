@@ -74,7 +74,7 @@
       "nl": "Semesterstage waarin ik een Proof of Concept bouwde waarmee patiënten wearable-gezondheidsdata veilig kunnen delen met het ziekenhuis via de ChipSoft-patiëntenapp."
     },
     "technologies": ["C#", ".NET", ".NET MAUI", "SQL", "Apple HealthKit", "Google Health Connect"],
-    "logo": "/logos/chipsoft.png",
+    "logo": "/logos/chipsoft.webp",
     "logoAlt": {
       "en": "ChipSoft logo",
       "nl": "ChipSoft logo"
@@ -180,7 +180,7 @@
       "nl": "Studie Software Engineering met focus op frontend, backend, samenwerken en moderne ontwikkelmethodes"
     },
     "technologies": ["Webdev", "C#", "Java", "Scrum"],
-    "logo": "/logos/windesheim.png",
+    "logo": "/logos/windesheim.webp",
     "logoAlt": {
       "en": "Windesheim logo",
       "nl": "Windesheim logo"
@@ -219,7 +219,7 @@
       "nl": "Propedeuse HBO-ICT aan Hogeschool Windesheim behaald."
     },
     "technologies": ["C#", "Java", "Scrum"],
-    "logo": "/logos/windesheim.png",
+    "logo": "/logos/windesheim.webp",
     "logoAlt": {
       "en": "Windesheim logo",
       "nl": "Windesheim logo"
@@ -235,7 +235,7 @@
       "nl": "HAVO afgerond in Zwolle."
     },
     "technologies": [],
-    "logo": "/logos/thomas a kempis.jpg",
+    "logo": "/logos/thomas-a-kempis.webp",
     "logoAlt": {
       "en": "Landstede logo",
       "nl": "Landstede logo"
@@ -276,7 +276,7 @@
       "nl": "Certificering afgerond gericht op persoonlijk leiderschap, effectiviteit en samenwerkingsgewoonten."
     },
     "technologies": ["Personal Development"],
-    "logo": "/logos/franklincovey.png",
+    "logo": "/logos/franklincovey.webp",
     "logoAlt": {
       "en": "FranklinCovey logo",
       "nl": "FranklinCovey logo"
@@ -308,7 +308,7 @@
       "nl": "Meegelopen met een Operational Specialist Intelligence en inzicht gekregen in onderzoekend en analytisch werk."
     },
     "technologies": [],
-    "logo": "/logos/politie.png",
+    "logo": "/logos/politie.webp",
     "logoAlt": {
       "en": "Politie logo",
       "nl": "Politie logo"
@@ -324,7 +324,7 @@
       "nl": "Ontworpen en onderhouden van de website van een lokaal bedrijf met focus op gebruiksvriendelijkheid en design."
     },
     "technologies": ["HTML", "CSS", "Web Design"],
-    "logo": "/logos/ommeroase.jpg",
+    "logo": "/logos/ommeroase.webp",
     "logoAlt": {
       "en": "Ommer Oase logo",
       "nl": "Ommer Oase logo"
