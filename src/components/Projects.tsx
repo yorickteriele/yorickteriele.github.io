@@ -15,9 +15,18 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
-            {t.projects.title}
-          </h2>
+          <div className="relative mb-16">
+            <h2 className="text-4xl font-bold text-center text-foreground">
+              {t.projects.title}
+            </h2>
+            <Link
+              href="/status/"
+              className="absolute right-0 top-1/2 -translate-y-1/2 inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+              {t.status.title}
+            </Link>
+          </div>
           
           {/* Featured Projects */}
           <div className="grid md:grid-cols-2 gap-8 mb-16 md:items-stretch">

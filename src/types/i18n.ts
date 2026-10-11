@@ -86,6 +86,20 @@ export interface ReadingTranslations {
   backHome: string;
 }
 
+// Status translations
+export interface StatusTranslations {
+  title: string;
+  description: string;
+  checking: string;
+  up: string;
+  down: string;
+  allUp: string;
+  someDown: string;
+  lastChecked: string;
+  recheck: string;
+  backHome: string;
+}
+
 // Footer translations
 export interface FooterTranslations {
   copyright: string;
@@ -101,6 +115,7 @@ export interface Translations {
   projects: ProjectsTranslations;
   contact: ContactTranslations;
   reading: ReadingTranslations;
+  status: StatusTranslations;
   footer: FooterTranslations;
 }
 

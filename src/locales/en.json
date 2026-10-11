@@ -68,6 +68,18 @@
     "empty": "No books on this shelf yet.",
     "backHome": "Back to home"
   },
+  "status": {
+    "title": "Status",
+    "description": "Live status of the projects I host. Checked straight from your browser.",
+    "checking": "Checking…",
+    "up": "Online",
+    "down": "Unreachable",
+    "allUp": "All systems operational",
+    "someDown": "{count} of {total} unreachable",
+    "lastChecked": "Last checked",
+    "recheck": "Check again",
+    "backHome": "Back to home"
+  },
   "footer": {
     "copyright": "All rights reserved"
   }

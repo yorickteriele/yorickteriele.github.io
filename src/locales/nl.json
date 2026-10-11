@@ -68,6 +68,18 @@
     "empty": "Nog geen boeken op deze plank.",
     "backHome": "Terug naar home"
   },
+  "status": {
+    "title": "Status",
+    "description": "Live status van de projecten die ik host. Rechtstreeks gecontroleerd vanuit je browser.",
+    "checking": "Controleren…",
+    "up": "Online",
+    "down": "Onbereikbaar",
+    "allUp": "Alles werkt naar behoren",
+    "someDown": "{count} van {total} onbereikbaar",
+    "lastChecked": "Laatst gecontroleerd",
+    "recheck": "Opnieuw controleren",
+    "backHome": "Terug naar home"
+  },
   "footer": {
     "copyright": "Alle rechten voorbehouden"
   }
