@@ -6,10 +6,12 @@ import { ArrowLeft, Check, X } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import statusGroups from "@/data/status-services.json";
 
-// Written every 5 minutes by .github/workflows/status.yml.
-const DATA_URL = "https://raw.githubusercontent.com/yorickteriele/yorickteriele.github.io/refs/heads/status-data/status.json";
+// Served by status-monitor/, which runs on the personal Dokploy.
+const DATA_URL = "https://status.yorickteriele.nl/status.json";
 const DAYS = 90;
 const REFRESH_MS = 60_000;
+// The monitor checks every minute; older data means the monitor itself is down.
+const STALE_MS = 10 * 60_000;
 
 interface Day {
   date: string;
@@ -110,7 +112,7 @@ export default function StatusPage() {
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await fetch(`${DATA_URL}?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(DATA_URL, { cache: "no-store" });
         if (!res.ok) throw new Error(String(res.status));
         setData(await res.json());
         setFailed(false);
@@ -124,6 +126,7 @@ export default function StatusPage() {
   }, []);
 
   const down = data ? services.filter((service) => data.services[service.url]?.up === false).length : 0;
+  const stale = data ? Date.now() - new Date(data.updatedAt).getTime() > STALE_MS : false;
 
   return (
     <div className="pt-32 pb-12">
@@ -146,14 +149,16 @@ export default function StatusPage() {
             <div className="flex items-center gap-3 font-semibold text-foreground">
               <span
                 className={`inline-block w-2.5 h-2.5 rounded-full ${
-                  !data ? "bg-foreground/40 animate-pulse" : down > 0 ? "bg-red-400" : "bg-emerald-400"
+                  !data ? "bg-foreground/40 animate-pulse" : stale ? "bg-amber-400" : down > 0 ? "bg-red-400" : "bg-emerald-400"
                 }`}
               />
               {failed && !data
                 ? t.status.unavailable
                 : !data
                   ? t.status.loading
-                  : down > 0
+                  : stale
+                    ? t.status.stale
+                    : down > 0
                     ? t.status.someDown.replace("{count}", String(down)).replace("{total}", String(services.length))
                     : t.status.allUp}
             </div>

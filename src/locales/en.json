@@ -78,6 +78,7 @@
     "someDown": "{count} of {total} down",
     "lastChecked": "Last checked",
     "unavailable": "Status data is unavailable right now.",
+    "stale": "Status data is out of date, the monitor may be down.",
     "uptime": "uptime",
     "daysAgo": "90 days ago",
     "today": "Today",

@@ -97,6 +97,7 @@ export interface StatusTranslations {
   someDown: string;
   lastChecked: string;
   unavailable: string;
+  stale: string;
   uptime: string;
   daysAgo: string;
   today: string;

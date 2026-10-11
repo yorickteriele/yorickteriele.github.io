@@ -78,6 +78,7 @@
     "someDown": "{count} van {total} offline",
     "lastChecked": "Laatst gecontroleerd",
     "unavailable": "Statusgegevens zijn nu niet beschikbaar.",
+    "stale": "Statusgegevens zijn verouderd, de monitor is mogelijk offline.",
     "uptime": "uptime",
     "daysAgo": "90 dagen geleden",
     "today": "Vandaag",
