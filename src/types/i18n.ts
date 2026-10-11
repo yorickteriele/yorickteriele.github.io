@@ -89,7 +89,6 @@ export interface ReadingTranslations {
 // Status translations
 export interface StatusTranslations {
   title: string;
-  description: string;
   loading: string;
   up: string;
   down: string;

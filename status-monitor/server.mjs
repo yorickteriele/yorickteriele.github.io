@@ -27,6 +27,21 @@ try {
   // First run: start with an empty history.
 }
 
+// Optional: fill in history for days without data from $SEED_FILE (same format
+// as status.json). Days the monitor measured itself are never overwritten.
+if (process.env.SEED_FILE && existsSync(process.env.SEED_FILE)) {
+  const seed = JSON.parse(await readFile(process.env.SEED_FILE, "utf8"));
+  for (const [url, { days }] of Object.entries(seed.services ?? {})) {
+    const current = state.services[url] ?? { up: true, code: null, ms: null, days: [] };
+    const known = new Set(current.days.map((day) => day.date));
+    current.days = [...current.days, ...days.filter((day) => !known.has(day.date))]
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .slice(-HISTORY_DAYS);
+    state.services[url] = current;
+  }
+  console.log(`Loaded history from ${process.env.SEED_FILE}`);
+}
+
 // Any HTTP answer below 500 counts as up (e.g. the MCP server answers 401).
 async function check(url) {
   const start = performance.now();

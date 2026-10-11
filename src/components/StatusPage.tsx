@@ -31,9 +31,7 @@ interface StatusData {
   services: Record<string, ServiceStatus>;
 }
 
-const services = statusGroups.flatMap((group) =>
-  group.services.map((service) => ({ ...service, project: group.project })),
-);
+const services = statusGroups.flatMap((group) => group.services);
 
 // The last 90 calendar days (UTC, matching the checker), oldest first.
 function lastDays() {
@@ -54,21 +52,19 @@ function formatUptime(days: Day[]) {
   const total = days.reduce((sum, day) => sum + day.total, 0);
   if (total === 0) return null;
   const pct = (up / total) * 100;
-  return pct === 100 ? "100" : pct.toFixed(2);
+  // Round down so a single short outage never shows as 100%.
+  return pct === 100 ? "100" : (Math.floor(pct * 100) / 100).toFixed(2);
 }
 
-function ServiceCard({ name, project, status }: { name: string; project: string; status?: ServiceStatus }) {
+function ServiceRow({ name, status }: { name: string; status?: ServiceStatus }) {
   const { t, locale } = useLanguage();
   const byDate = new Map(status?.days.map((day) => [day.date, day]));
   const uptime = status ? formatUptime(status.days) : null;
 
   return (
-    <div className="p-6 bg-card">
+    <li className="px-6 py-4">
       <div className="flex items-center justify-between gap-4 mb-3">
-        <h2 className="font-semibold text-foreground truncate">
-          {project}
-          {name !== "Website" && <span className="font-normal text-foreground/70"> · {name}</span>}
-        </h2>
+        <h3 className="text-foreground/90 truncate">{name}</h3>
         {status && (
           <span
             title={status.up ? t.status.up : t.status.down}
@@ -100,7 +96,7 @@ function ServiceCard({ name, project, status }: { name: string; project: string;
         <span className="flex-1 h-px bg-border" />
         <span className="shrink-0">{t.status.today}</span>
       </div>
-    </div>
+    </li>
   );
 }
 
@@ -131,7 +127,7 @@ export default function StatusPage() {
   return (
     <div className="pt-32 pb-12">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <Link
             href="/#projects"
             className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors mb-8"
@@ -140,10 +136,7 @@ export default function StatusPage() {
             {t.status.backHome}
           </Link>
 
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">{t.status.title}</h1>
-            <p className="text-xl text-foreground/80 leading-relaxed">{t.status.description}</p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">{t.status.title}</h1>
 
           <div className="flex flex-wrap items-center justify-between gap-4 bg-card border border-border rounded-lg px-6 py-4 mb-8">
             <div className="flex items-center gap-3 font-semibold text-foreground">
@@ -170,16 +163,19 @@ export default function StatusPage() {
             )}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-px bg-border border border-border rounded-lg overflow-hidden">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.url}
-                name={service.name}
-                project={service.project}
-                status={data?.services[service.url]}
-              />
+          <div className="space-y-6">
+            {statusGroups.map((group) => (
+              <section key={group.project} className="bg-card border border-border rounded-lg overflow-hidden">
+                <h2 className="px-6 py-4 text-lg font-semibold text-foreground border-b border-border">
+                  {group.project}
+                </h2>
+                <ul className="divide-y divide-border">
+                  {group.services.map((service) => (
+                    <ServiceRow key={service.url} name={service.name} status={data?.services[service.url]} />
+                  ))}
+                </ul>
+              </section>
             ))}
-            {services.length % 2 === 1 && <div className="hidden md:block bg-card" />}
           </div>
         </div>
       </div>
