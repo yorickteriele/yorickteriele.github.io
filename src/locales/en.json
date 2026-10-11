@@ -70,7 +70,7 @@
   },
   "status": {
     "title": "Status",
-    "description": "Uptime of the projects I host, checked every 5 minutes.",
+    "description": "Uptime of the projects I host, checked every minute.",
     "loading": "Loading…",
     "up": "Online",
     "down": "Down",

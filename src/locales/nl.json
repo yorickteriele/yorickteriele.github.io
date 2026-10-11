@@ -70,7 +70,7 @@
   },
   "status": {
     "title": "Status",
-    "description": "Uptime van de projecten die ik host, elke 5 minuten gecontroleerd.",
+    "description": "Uptime van de projecten die ik host, elke minuut gecontroleerd.",
     "loading": "Laden…",
     "up": "Online",
     "down": "Offline",
