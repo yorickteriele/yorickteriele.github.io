@@ -90,13 +90,17 @@ export interface ReadingTranslations {
 export interface StatusTranslations {
   title: string;
   description: string;
-  checking: string;
+  loading: string;
   up: string;
   down: string;
   allUp: string;
   someDown: string;
   lastChecked: string;
-  recheck: string;
+  unavailable: string;
+  uptime: string;
+  daysAgo: string;
+  today: string;
+  noData: string;
   backHome: string;
 }
 

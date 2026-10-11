@@ -1,0 +1,26 @@
+[
+  {
+    "project": "Aresis",
+    "services": [
+      { "name": "Website", "url": "https://aresis.nl" },
+      { "name": "API", "url": "https://api.aresis.nl/health" },
+      { "name": "MCP server", "url": "https://mcp.aresis.nl" }
+    ]
+  },
+  {
+    "project": "ManyVoiced",
+    "services": [{ "name": "Website", "url": "https://manyvoiced.com" }]
+  },
+  {
+    "project": "Superelf Football Pool",
+    "services": [{ "name": "Website", "url": "https://superelf.yorickteriele.nl" }]
+  },
+  {
+    "project": "Trading Bot",
+    "services": [{ "name": "Dashboard", "url": "https://trading.yorickteriele.nl" }]
+  },
+  {
+    "project": "Procedural Cave Generator",
+    "services": [{ "name": "Demo", "url": "https://cavegame.yorickteriele.nl" }]
+  }
+]

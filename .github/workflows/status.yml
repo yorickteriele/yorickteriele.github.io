@@ -1,0 +1,43 @@
+# Checks the hosted projects every 5 minutes and stores the results on the
+# `status-data` branch (one commit, force-pushed), which the /status page reads.
+name: Status checks
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status-checks
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch previous results
+        run: |
+          mkdir -p data
+          git fetch --depth=1 origin status-data && git show origin/status-data:status.json > data/status.json || true
+
+      - name: Check services
+        run: node scripts/check-status.mjs data/status.json
+
+      - name: Publish results
+        run: |
+          cd data
+          git init -q -b status-data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          git commit -q -m "Update status"
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" status-data

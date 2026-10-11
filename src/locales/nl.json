@@ -70,14 +70,18 @@
   },
   "status": {
     "title": "Status",
-    "description": "Live status van de projecten die ik host. Rechtstreeks gecontroleerd vanuit je browser.",
-    "checking": "Controleren…",
+    "description": "Uptime van de projecten die ik host, elke 5 minuten gecontroleerd.",
+    "loading": "Laden…",
     "up": "Online",
-    "down": "Onbereikbaar",
+    "down": "Offline",
     "allUp": "Alles werkt naar behoren",
-    "someDown": "{count} van {total} onbereikbaar",
+    "someDown": "{count} van {total} offline",
     "lastChecked": "Laatst gecontroleerd",
-    "recheck": "Opnieuw controleren",
+    "unavailable": "Statusgegevens zijn nu niet beschikbaar.",
+    "uptime": "uptime",
+    "daysAgo": "90 dagen geleden",
+    "today": "Vandaag",
+    "noData": "Geen gegevens",
     "backHome": "Terug naar home"
   },
   "footer": {
