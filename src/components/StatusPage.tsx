@@ -7,7 +7,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import statusGroups from "@/data/status-services.json";
 
 // Written every 5 minutes by .github/workflows/status.yml.
-const DATA_URL = "https://raw.githubusercontent.com/yorickteriele/yorickteriele.github.io/status-data/status.json";
+const DATA_URL = "https://raw.githubusercontent.com/yorickteriele/yorickteriele.github.io/refs/heads/status-data/status.json";
 const DAYS = 90;
 const REFRESH_MS = 60_000;
 
