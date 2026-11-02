@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { shelfUrl, shelves, type Book, type Shelf } from "@/lib/goodreads";
+import { shelfLinks, shelves, type Book, type Shelf } from "@/lib/books";
 import BookCard from "./BookCard";
 
 // Two rows at every breakpoint: 2, 3 and 5 columns.
@@ -48,15 +48,21 @@ function ShelfSection({
             {Math.max(total, items.length)}
           </span>
         </h2>
-        <a
-          href={shelfUrl(shelf)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex shrink-0 items-center gap-2 bg-primary-strong text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary-strong/90 transition-colors font-medium"
-        >
-          {t.reading.viewMore}
-          <ExternalLink className="w-4 h-4" />
-        </a>
+        <div className="flex shrink-0 flex-wrap justify-end gap-2">
+          {shelfLinks(shelf).map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${t.reading.viewMore} (${link.label})`}
+              className="inline-flex items-center gap-2 bg-primary-strong text-primary-foreground px-4 py-2.5 rounded-md hover:bg-primary-strong/90 transition-colors font-medium"
+            >
+              {link.label}
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          ))}
+        </div>
       </div>
 
       {items.length > 0 ? (
