@@ -1,8 +1,7 @@
 // Writes the Goodreads shelves to src/data/goodreads.json so the site can
 // render them as static content instead of loading Goodreads in the browser.
 // Runs before every build (including the nightly scheduled deploy).
-// On any failure the existing file is kept so the build never breaks; the
-// site merges this with src/data/hardcover.json (see src/lib/books.ts).
+// On any failure the existing file is kept so the build never breaks.
 import { writeFile } from "node:fs/promises";
 
 const USER_ID = "192543272";
@@ -61,6 +60,7 @@ async function fetchShelf(shelf) {
   return [...books.values()];
 }
 
+const strip = ({ readAt, addedAt, ...book }) => book;
 const newest = (key) => (a, b) => (b[key] || b.addedAt) - (a[key] || a.addedAt);
 
 try {
@@ -74,9 +74,9 @@ try {
       // The To read section also lists currently-reading books, each once.
       toRead: currentlyReading.length + toRead.filter((book) => !currentUrls.has(book.url)).length,
     },
-    currentlyReading: currentlyReading.sort(newest("addedAt")),
-    read: read.sort(newest("readAt")),
-    toRead: toRead.sort(newest("addedAt")),
+    currentlyReading: currentlyReading.sort(newest("addedAt")).map(strip),
+    read: read.sort(newest("readAt")).map(strip),
+    toRead: toRead.sort(newest("addedAt")).map(strip),
   };
   await writeFile(OUTPUT, JSON.stringify(data, null, 2) + "\n");
   console.log("Goodreads shelves:", data.counts, `currently reading: ${currentlyReading.length}`);

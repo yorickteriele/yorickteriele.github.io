@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "../contexts/LanguageContext";
-import { shelves, type Book } from "@/lib/books";
+import { shelves, type Book } from "@/lib/goodreads";
 import { BookCover, Stars } from "./BookCard";
 
 type UpdateKind = "currentlyReading" | "finished" | "wantToRead";

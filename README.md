@@ -20,12 +20,7 @@ npm run build   # static export to ./out
 
 ## Reading
 
-The Reading section merges two snapshots, refreshed on every deploy (including the nightly one):
-
-- `src/data/goodreads.json`, from the Goodreads RSS feeds via `node scripts/goodreads.mjs`.
-- `src/data/hardcover.json`, from the Hardcover API via `HARDCOVER_TOKEN=... node scripts/hardcover.mjs`. In CI the token comes from the `HARDCOVER_TOKEN` repository secret (get it at https://hardcover.app/account/api).
-
-Books on both sites are shown once (matched by title and author), and the furthest status wins. If a fetch fails, the last snapshot is kept and the run shows a warning.
+The Reading section is built from `src/data/goodreads.json`, which `scripts/goodreads.mjs` refreshes from the Goodreads RSS feeds on every deploy, including the nightly one. Run `node scripts/goodreads.mjs` to refresh it locally.
 
 ## Deployment
 

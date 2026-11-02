@@ -12,7 +12,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  # Rebuild daily so the Goodreads and Hardcover shelves stay current
+  # Rebuild daily so the Goodreads shelf counts stay current
   schedule:
     - cron: "0 4 * * *"
 
@@ -79,10 +79,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Fetch Goodreads shelves
         run: node scripts/goodreads.mjs
-      - name: Fetch Hardcover shelves
-        run: node scripts/hardcover.mjs
-        env:
-          HARDCOVER_TOKEN: ${{ secrets.HARDCOVER_TOKEN }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact

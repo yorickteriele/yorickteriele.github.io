@@ -5,7 +5,7 @@ import { generateMetadata } from "@/utils/seo";
 
 export const metadata = generateMetadata({
   title: "Reading",
-  description: "Books Yorick te Riele has read and wants to read, synced from Goodreads and Hardcover.",
+  description: "Books Yorick te Riele has read and wants to read, synced from Goodreads.",
   path: "/reading/",
 });
 

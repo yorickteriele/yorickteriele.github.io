@@ -1,7 +1,7 @@
 "use client";
 
 import { BookOpen, Star } from "lucide-react";
-import type { Book } from "@/lib/books";
+import type { Book } from "@/lib/goodreads";
 
 export function Stars({ rating }: { rating: number }) {
   return (
