@@ -186,7 +186,7 @@ export default function CVPrint() {
           </dl>
           {/* src is set by loadCvPhoto right before printing */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img data-cv-photo alt="" width={640} height={640} />
+          <img data-cv-photo alt="" width={540} height={640} />
         </div>
       </section>
 
