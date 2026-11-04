@@ -196,9 +196,8 @@ body {
   }
 
   .cv-personal img {
-    height: 2.95in;
-    object-fit: cover;
-    object-position: 75% center;
+    height: 2in;
+    object-fit: contain;
     position: absolute;
     right: 0;
     top: 1.35in;
