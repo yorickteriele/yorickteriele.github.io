@@ -75,6 +75,7 @@
     },
     "technologies": ["C#", ".NET", ".NET MAUI", "SQL", "Apple HealthKit", "Google Health Connect"],
     "logo": "/logos/chipsoft.webp",
+    "logoLight": true,
     "logoAlt": {
       "en": "ChipSoft logo",
       "nl": "ChipSoft logo"

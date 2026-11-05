@@ -133,6 +133,8 @@ export interface ExperienceItem {
   technologies: string[];
   logo?: string;
   logoAlt?: Record<Locale, string>;
+  /** Light tile behind logos that are unreadable on a dark background */
+  logoLight?: boolean;
   links?: Array<{
     label: Record<Locale, string>;
     href: string;

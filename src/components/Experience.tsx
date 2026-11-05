@@ -47,7 +47,7 @@ export default function Experience() {
           <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-3">
             <div className="flex flex-1 gap-4">
               {exp.logo && (
-                <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-border/70 bg-background/80 p-2 shadow-sm">
+                <div className={`relative flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-border/70 p-2 shadow-sm ${exp.logoLight ? "bg-white" : "bg-background/80"}`}>
                   <Image
                     src={exp.logo}
                     alt={exp.logoAlt || ""}

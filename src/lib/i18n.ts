@@ -33,6 +33,7 @@ export function getExperienceItems(locale: Locale): Array<{
   technologies: string[];
   logo?: string;
   logoAlt?: string;
+  logoLight?: boolean;
   links?: Array<{
     label: string;
     href: string;
@@ -55,6 +56,7 @@ export function getExperienceItems(locale: Locale): Array<{
       technologies: item.technologies,
       logo: item.logo,
       logoAlt: item.logoAlt?.[locale] || item.logoAlt?.[defaultLocale],
+      logoLight: item.logoLight,
       links: item.links?.map(link => ({
         label: link.label[locale] || link.label[defaultLocale],
         href: link.href,
