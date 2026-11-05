@@ -167,7 +167,7 @@ body {
 
   .cv-personal {
     display: block;
-    min-height: 2.3in;
+    min-height: 1.8in;
     padding-right: 2.35in;
   }
 
@@ -213,7 +213,7 @@ body {
   /* Photo stands on the Introduction rule, as if peeking over the line */
   .cv-photo-rule img {
     bottom: 0;
-    height: 2.8in;
+    height: 2.3in;
     position: absolute;
     right: 0;
     width: auto;
