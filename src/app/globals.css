@@ -167,7 +167,7 @@ body {
 
   .cv-personal {
     display: block;
-    min-height: 1.05in;
+    min-height: 2.3in;
     padding-right: 2.35in;
   }
 
@@ -195,17 +195,33 @@ body {
     margin: 0;
   }
 
-  .cv-personal img {
-    height: 2.37in;
-    object-fit: contain;
-    position: absolute;
-    right: 0;
-    top: 1.35in;
-    width: 2in;
+  .cv-photo-rule {
+    position: relative;
   }
 
-  .cv-intro {
-    margin-right: 2.35in;
+  /* Redraw the rule on top so the photo stands on it */
+  .cv-photo-rule::after {
+    border-bottom: 1px solid black;
+    bottom: -1px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* Photo stands on the Introduction rule, as if peeking over the line */
+  .cv-photo-rule img {
+    bottom: 0;
+    height: 2.8in;
+    position: absolute;
+    right: 0;
+    width: auto;
+  }
+
+  /* Full-width rule so the photo can stand on it */
+  .cv-intro h2 {
+    margin-right: 0;
   }
 
   .cv-row {

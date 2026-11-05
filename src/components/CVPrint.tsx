@@ -184,14 +184,16 @@ export default function CVPrint() {
               </dd>
             </div>
           </dl>
-          {/* src is set by loadCvPhoto right before printing */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img data-cv-photo alt="" width={540} height={640} />
         </div>
       </section>
 
       <section className="cv-section cv-intro">
-        <h2>{l.intro}</h2>
+        <h2 className="cv-photo-rule">
+          {l.intro}
+          {/* Photo stands on this heading's rule. src is set by loadCvPhoto right before printing */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img data-cv-photo alt="" width={540} height={640} />
+        </h2>
         <p>{t.about.paragraph1}</p>
         <p>{t.about.paragraph2}</p>
       </section>
